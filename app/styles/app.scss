@@ -1,0 +1,50 @@
+@import 'modal';
+@import 'keyboard-ui';
+@import 'word-display';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Neucha', cursive;
+  font-size: 24px;
+  color: #312f1a; /* MAKE VARIABLE */
+  background: #f5ec84 url(../images/margin-left.png) repeat-y 142px 0;
+
+  .hangman {
+    padding-left: 162px;
+    height: 100%;
+
+    header {
+      h1 {
+        overflow: hidden;
+        margin: 0;
+        width: 293px;
+        font-size: 2em;
+        line-height: 93px;
+        text-indent: 100%;
+        white-space: nowrap;
+        background: transparent url(../images/title_hangman.png) no-repeat left center;
+      }
+    }
+
+    .gameboard {
+      position: fixed;
+      top: 93px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-left: 162px;
+      background: url(../images/horizontal-rule.png) repeat 0 0;
+
+      .instructions {
+        margin: 0;
+        font-size: 16px;
+        line-height: 35px;
+      }
+    }
+  }
+}
