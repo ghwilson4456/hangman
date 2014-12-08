@@ -1,6 +1,12 @@
 import Ember from "ember";
 
 export default Ember.Route.extend({
+  model: function() {
+    var movies = this.store.all('movie');
+    console.log(movies);
+    return movies;
+  },
+
   actions: {
     keyboardUIClick: function(letter) {
       var controller = this.get('controller');
