@@ -2,12 +2,14 @@ import Ember from "ember";
 
 export default Ember.Route.extend({
   model: function() {
-    var movies = this.store.all('movie');
-    console.log(movies);
-    return movies;
+    return Ember.$.getJSON('/data/words.json');
   },
 
   actions: {
+    refresh: function() {
+      this.get('controller').refresh();
+    },
+
     keyboardUIClick: function(letter) {
       var controller = this.get('controller');
       var suggestions = (controller.get('suggestions').length) ? controller.get('suggestions').join(',').split(',') : [];

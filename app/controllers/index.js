@@ -1,23 +1,52 @@
 import Ember from "ember";
 
 export default Ember.ObjectController.extend({
-  MAX_MISSES: 9,
+  MAX_MISSES: 6,
 
-  words: ['abstract', 'boolean', 'break', 'byte', 'case', 'catch', 'char', 'class', 'continue', 'const', 'debugger', 'default', 'delete', 'double', 'else', 'enum', 'export', 'extends', 'false', 'final', 'finally', 'float', 'for', 'function', 'goto', 'implements', 'import', 'instanceof', 'int', 'interface', 'long', 'namespace', 'native', 'new', 'null', 'package', 'private', 'protected', 'public', 'return', 'short', 'static', 'super', 'switch', 'synchronized', 'this', 'throw', 'throws', 'transient', 'true', 'try', 'typeof', 'use', 'var', 'void', 'volatile', 'while', 'with'],
+  words: [],
   word: '',
   suggestions: [],
+  selectedCategory: null,
 
-  init: function() {
+  lettersOnlyWord: function() {
+    var word = this.get('word');
+    var computed = '';
+    for (var i = 0; i < word.length; i++) {
+      computed += (word.charCodeAt(i) > 64 && word.charCodeAt(i) < 91) ? word.charAt(i) : '' ;
+    }
+
+    return computed;
+  }.property('word'),
+
+  refresh: function() {
     this.newWord();
   },
 
+  categoryChanged: function() {
+    if (this.get('model.words.length') > 0) {
+      var self = this;
+      var words = [];
+
+      this.get('model.words').map(function(item) {
+        if (item.id === self.get('selectedCategory')) {
+          words = item.list.join(',').split(',');
+        }
+      });
+
+      this.set('words', words);
+      this.resetGame();
+    }
+  }.observes('selectedCategory'),
+
   newWord: function() {
     var words = this.get('words');
-    this.set('word', words[Math.floor(Math.random() * words.length)].toUpperCase());
+    if (this.get('words.length') > 0) {
+      this.set('word', words[Math.floor(Math.random() * words.length)].toUpperCase());
+    }
   },
 
   uniqueLetters: function() {
-    return this.get('word').split('').filter(function(item, index, enumerable) {
+    return this.get('lettersOnlyWord').split('').filter(function(item, index, enumerable) {
       return enumerable.indexOf(item) === index;
     });
   }.property('word', 'suggestions'),
@@ -34,7 +63,7 @@ export default Ember.ObjectController.extend({
   correctCount: function() {
     var self = this;
     return this.get('suggestions').filter(function(item) {
-      if (self.get('word').indexOf(item) > -1) {
+      if (self.get('lettersOnlyWord').indexOf(item) > -1) {
         return item;
       }
     }).length;
@@ -43,7 +72,7 @@ export default Ember.ObjectController.extend({
   missedCount: function() {
     var self = this;
     return this.get('suggestions').filter(function(item) {
-      if (self.get('word').indexOf(item) === -1) {
+      if (self.get('lettersOnlyWord').indexOf(item) === -1) {
         return item;
       }
     }).length;
@@ -54,7 +83,7 @@ export default Ember.ObjectController.extend({
     var letters = [];
     
     letters = this.get('suggestions').filter(function(item) {
-      if (self.get('word').indexOf(item) === -1) {
+      if (self.get('lettersOnlyWord').indexOf(item) === -1) {
         return item;
       }
     });
@@ -81,7 +110,7 @@ export default Ember.ObjectController.extend({
     var lose = this.get('missedCount') >= this.get('MAX_MISSES');
     var win = this.get('complete');
 
-    if (win) {
+    if (this.get('word') !== '' && win === true) {
       this.send('openModal', 'win-modal');
     } else if (lose) {
       this.send('openModal', 'lose-modal');
@@ -91,7 +120,7 @@ export default Ember.ObjectController.extend({
   }.property('word', 'suggestions'),
 
   resetGame: function() {
-    this.newWord();
     this.set('suggestions', []);
+    this.newWord();
   }
 });

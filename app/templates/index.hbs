@@ -1,6 +1,19 @@
 <section class="gameboard">
-  <p class="instructions">Try to guess the JavaScript reserved word below.</p>
-  {{word-display word=word letters=suggestions action="statsUpdated"}}
-  {{data-display data=displayData}}
-  {{keyboard-ui selected=suggestions disabled=missedLetters action="keyboardUIClick" active=gameOver}}
+  {{view
+    "select"
+    content=model.categories
+    prompt="Select a category..."
+    selection=selectedCategory}}
+    
+  {{#if selectedCategory}}
+  <span class="refresh" {{action 'refresh'}}>refresh</span>
+  {{/if}}
+
+  {{#if selectedCategory}}
+    {{word-display word=word letters=suggestions action="statsUpdated"}}
+    {{data-display data=displayData}}
+    {{keyboard-ui selected=suggestions disabled=missedLetters action="keyboardUIClick" active=gameOver}}
+  {{else}}
+    <p>Welcome</p>
+  {{/if}}
 </section>

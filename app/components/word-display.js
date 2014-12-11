@@ -7,6 +7,20 @@ export default Ember.Component.extend({
   displayLetters: function() {
     var letters = this.get('letters');
     var display = this.get('word').split('').map(function(item) {
+      var charCode = item.charCodeAt(0);
+      
+      if (charCode < 65 || charCode > 90) {
+        if (charCode === 32) {
+          return {
+            char: '&nbsp;'
+          };
+        } else {
+          return {
+            char: item
+          };
+        }
+      }
+
       if (letters.indexOf(item) === -1 ) {
         return "&nbsp";
       }

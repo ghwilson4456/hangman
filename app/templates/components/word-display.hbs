@@ -1,3 +1,7 @@
 {{#each letter in displayLetters}}
+  {{#if letter.char}}
+  <span  class="letter non-letter">{{{letter.char}}}</span>
+  {{else}}
   <span  class="letter">{{{letter}}}</span>
+  {{/if}}
 {{/each}}
