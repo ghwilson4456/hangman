@@ -1,19 +1,15 @@
 <section class="gameboard">
-  {{view
-    "select"
+  {{category-select
     content=model.categories
     prompt="Select a category..."
-    selection=selectedCategory}}
-    
-  {{#if selectedCategory}}
-  <span class="refresh" {{action 'refresh'}}>refresh</span>
-  {{/if}}
+    selection=selectedCategory
+    action="refresh"}}
 
   {{#if selectedCategory}}
     {{word-display word=word letters=suggestions action="statsUpdated"}}
     {{data-display data=displayData}}
     {{keyboard-ui selected=suggestions disabled=missedLetters action="keyboardUIClick" active=gameOver}}
   {{else}}
-    <p>Welcome</p>
+  <article class="intro">Welcome</article>
   {{/if}}
 </section>

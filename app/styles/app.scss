@@ -1,6 +1,8 @@
 @import 'modal';
 @import 'keyboard-ui';
 @import 'word-display';
+@import 'category-select';
+@import 'data-display';
 
 html,
 body {
@@ -29,6 +31,9 @@ body {
         white-space: nowrap;
         background: transparent url(../images/title_hangman.png) no-repeat left center;
       }
+    }
+
+    .intro {
     }
 
     .gameboard {
