@@ -1,0 +1,9 @@
+.hangman-display {
+  width: 220px;
+  height: 245px;
+  background: transparent url(../images/play_platform.png) no-repeat 0 0;
+
+  .bodyPart {
+    position: absolute;
+  }
+}

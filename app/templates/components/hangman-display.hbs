@@ -1,0 +1,6 @@
+{{#each part in bodyParts}}
+  <img src="images/play_{{part}}.png" class="bodyPart" />
+{{/each}}
+{{#unless missedCount}}
+  <img src="images/play_noose.png" class="bodyPart" />
+{{/unless}}
