@@ -21,15 +21,10 @@ export default Ember.Route.extend({
     },
 
     openModal: function(modalName) {
-      var controller = this.get('controller');
-      var model = {
-        word: controller.get('word')
-      };
-
       return this.render(modalName, {
         into: 'application',
         outlet: 'modal',
-        model: model
+        word: this.get('controller.word')
       });
     },
     

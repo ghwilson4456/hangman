@@ -7,6 +7,12 @@
 html,
 body {
   height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -22,14 +28,9 @@ body {
 
     header {
       h1 {
-        overflow: hidden;
         margin: 0;
-        width: 293px;
-        font-size: 2em;
+        font-size: 2.5em;
         line-height: 93px;
-        text-indent: 100%;
-        white-space: nowrap;
-        background: transparent url(../images/title_hangman.png) no-repeat left center;
       }
     }
 
@@ -37,7 +38,7 @@ body {
     }
 
     .gameboard {
-      position: fixed;
+      position: absolute;
       top: 93px;
       left: 0;
       right: 0;

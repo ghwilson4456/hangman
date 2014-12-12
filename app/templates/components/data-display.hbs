@@ -1,6 +1,3 @@
-<dl class="data-display">
-  {{#each data}}
-    <dt>{{label}}</dt>
-    <dl bind-attr class=data.className>{{value}}</dl>
-  {{/each}}
-</dl>
+{{#each data}}
+  <div bind-attr class=data.className><label>{{label}}</label>{{value}}</div>
+{{/each}}

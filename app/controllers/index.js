@@ -19,7 +19,7 @@ export default Ember.ObjectController.extend({
   }.property('word'),
 
   refresh: function() {
-    this.newWord();
+    this.resetGame();
   },
 
   categoryChanged: function() {
