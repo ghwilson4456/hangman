@@ -5,5 +5,82 @@
 
   .bodyPart {
     position: absolute;
+
+    /*
+    &.body,
+    &.rightArm,
+    &.leftArm,
+    &.rightLeg,
+    &.leftLeg {
+      -webkit-animation: fadein 2s;
+      -moz-animation: fadein 2s;
+      -ms-animation: fadein 2s;
+      -o-animation: fadein 2s;
+      animation: fadein 2s;
+    }
+    */
+
+    &.noose,
+    &.head {
+      transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+    }
+
+    &.body {
+      -webkit-animation: cssAnimation 2s  16 ease;
+      -moz-animation: cssAnimation 2s  16 ease;
+      -o-animation: cssAnimation 2s  16 ease;
+    }
+
+    @-webkit-keyframes cssAnimation {
+      from {
+        -webkit-transform: scale(1, 0) translate(0%, 0%);
+      }
+      to {
+        -webkit-transform: scale(1, 1) translate(0%, 0%);
+      }
+    }
+    @-moz-keyframes cssAnimation {
+      from {
+        -moz-transform: rotate(4deg) scale(0.1) skew(1deg) translate(0px);
+      }  to {
+        -moz-transform: rotate(4deg) scale(1.009) skew(1deg) translate(0px);
+      }
+    }
+
+    @-o-keyframes cssAnimation {
+      from { -o-transform: rotate(4deg) scale(0.1) skew(1deg) translate(0px);
+      }  to {
+        -o-transform: rotate(4deg) scale(1.009) skew(1deg) translate(0px);
+      }
+    }
+    /*
+    &.body {
+      transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+
+      transition: 2s ease-in-out;
+      -webkit-transition: 2s ease-in-out;
+      -moz-transition: 2s ease-in-out;
+    }
+    */
   }
 }
+
+/*
+classname {
+-webkit-animation: cssAnimation 1s 16 ease;
+-moz-animation: cssAnimation 1s 16 ease;
+-o-animation: cssAnimation 1s 16 ease;
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform: rotate(4deg) scale(0.1) skew(1deg) translate(0px); }
+to { -moz-transform: rotate(4deg) scale(1.009) skew(1deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform: rotate(4deg) scale(0.1) skew(1deg) translate(0px); }
+to { -o-transform: rotate(4deg) scale(1.009) skew(1deg) translate(0px); }
+}
+*/
