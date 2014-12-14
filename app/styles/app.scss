@@ -24,12 +24,20 @@ body {
   background: #f5ec84 url(../images/margin-left.png) repeat-y 142px 0;
 
   .hangman {
-    padding-left: 162px;
     height: 100%;
 
     header {
+      position: absolute;
+      z-index: 0;
+      top: 94px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-left: 162px;
+      background: url(../images/horizontal-rule.png) repeat 0 0;
+
       h1 {
-        margin: 0;
+        margin: -94px 0 0 0;
         font-size: 2.5em;
         line-height: 93px;
       }
@@ -39,18 +47,19 @@ body {
     }
 
     .gameboard {
-      position: absolute;
-      top: 93px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      position: relative;
+      z-index: 1;
+      padding-top: 95px;
       padding-left: 162px;
-      background: url(../images/horizontal-rule.png) repeat 0 0;
 
-      .instructions {
+      .intro {
         margin: 0;
-        font-size: 16px;
         line-height: 35px;
+
+        h1,
+        p {
+          margin: 0;
+        }
       }
     }
   }

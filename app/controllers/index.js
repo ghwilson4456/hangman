@@ -109,11 +109,14 @@ export default Ember.ObjectController.extend({
   gameOver: function() {
     var lose = this.get('missedCount') >= this.get('MAX_MISSES');
     var win = this.get('complete');
+    var self = this;
 
     if (this.get('word') !== '' && win === true) {
-      this.send('openModal', 'win-modal');
+      self.send('openModal', 'win-modal');
     } else if (lose) {
-      this.send('openModal', 'lose-modal');
+      Ember.run.later(this, function() {
+        this.send('openModal', 'lose-modal');
+      }, 1000);
     }
 
     return lose || win;
