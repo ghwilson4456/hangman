@@ -20,7 +20,7 @@ export default Ember.Route.extend({
       }
     },
 
-    openModal: function(modalName) {
+    addModal: function(modalName) {
       return this.render(modalName, {
         into: 'application',
         outlet: 'modal',
@@ -28,7 +28,8 @@ export default Ember.Route.extend({
       });
     },
     
-    closeModal: function() {
+    removeModal: function() {
+      console.log('routes/index/actions->closeModal()');
       this.get('controller').resetGame();
 
       return this.disconnectOutlet({

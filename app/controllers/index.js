@@ -112,10 +112,10 @@ export default Ember.ObjectController.extend({
     var self = this;
 
     if (this.get('word') !== '' && win === true) {
-      self.send('openModal', 'win-modal');
+      self.send('addModal', 'win-modal');
     } else if (lose) {
       Ember.run.later(this, function() {
-        this.send('openModal', 'lose-modal');
+        this.send('addModal', 'lose-modal');
       }, 1000);
     }
 
