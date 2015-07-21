@@ -1,0 +1,3 @@
+{{#each letter in alphabet}}
+  <span {{bind-attr class=":keyboard-letter letter.selected:selected letter.disabled:missed"}} {{action "keyboard-ui-click" letter}}>{{letter.char}}</span>
+{{/each}}

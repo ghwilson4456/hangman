@@ -1,0 +1,22 @@
+.keyboard-ui {
+  width: 390px;
+  font-size: 24px;
+
+  .keyboard-letter {
+    display: inline-block;
+    padding: 7px 0 0 16px;
+    width: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #000;
+    background: transparent url(../images/checkbox_sprite.png) no-repeat 0 -8px;
+
+    &.selected {
+      background: transparent url(../images/checkbox_sprite.png) no-repeat 0 -43px;
+    }
+
+    &.selected.missed {
+      background: transparent url(../images/checkbox_sprite.png) no-repeat 0 -78px;
+    }
+  }
+}

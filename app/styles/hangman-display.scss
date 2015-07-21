@@ -1,0 +1,21 @@
+.hangman-display {
+  width: 220px;
+  height: 245px;
+  background: transparent url(../images/play_platform.png) no-repeat 0 0;
+
+  .bodyPart {
+    position: absolute;
+
+    &.body,
+    &.rightArm,
+    &.leftArm,
+    &.rightLeg,
+    &.leftLeg {
+      -webkit-animation: fadein 1.5s;
+      -moz-animation: fadein 1.5s;
+      -ms-animation: fadein 1.5s;
+      -o-animation: fadein 1.5s;
+      animation: fadein 1.5s;
+    }
+  }
+}
