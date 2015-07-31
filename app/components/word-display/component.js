@@ -1,33 +1,34 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'div',
   classNames: ['word-display'],
 
   displayLetters: function() {
-    var letters = this.get('letters');
-    var display = this.get('word').split('').map(function(item) {
+    if (!this.attrs.word) {
+      return [];
+    }
+
+    var guessed = (this.attrs.guessed) ? this.attrs.guessed.toUpperCase().split('') : '';
+    var self = this;
+    return this.attrs.word.toUpperCase().split('').map(function(item) {
       var charCode = item.charCodeAt(0);
       
       if (charCode < 65 || charCode > 90) {
         if (charCode === 32) {
-          return {
-            char: '&nbsp;'
-          };
+          return { char: '&nbsp;' };
         } else {
-          return {
-            char: item
-          };
+          return { char: item };
         }
       }
 
-      if (letters.indexOf(item) === -1 ) {
-        return "&nbsp";
+      if (guessed.indexOf(item) === -1 ) {
+        return {
+            nonChar: true,
+            char: self.attrs.blank || '&nbsp;'
+          };
       }
 
-      return item;
+      return { char: item };
     });
-
-    return display;
-  }.property('word', 'letters')
+  }.property('attrs.word', 'attrs.guessed')
 });

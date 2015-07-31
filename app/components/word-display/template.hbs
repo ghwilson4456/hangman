@@ -1,7 +1,5 @@
-{{#each letter in displayLetters}}
-  {{#if letter.char}}
-  <span  class="letter non-letter">{{{letter.char}}}</span>
-  {{else}}
-  <span  class="letter">{{{letter}}}</span>
-  {{/if}}
+<div>
+{{#each displayLetters as |letter|}}
+  <span  class={{if letter.nonChar 'letter' 'letter non-letter'}}>{{{letter.char}}}</span>
 {{/each}}
+</div>

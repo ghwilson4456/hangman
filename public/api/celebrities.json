@@ -1,0 +1,404 @@
+{
+  "celebrities": [
+    {
+      "id": "1",
+      "name": "Beyonce Knowles"
+    },
+    {
+      "id": "2",
+      "name": "LeBron James"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Dre"
+    },
+    {
+      "id": "4",
+      "name": "Oprah Winfrey"
+    },
+    {
+      "id": "5",
+      "name": "Ellen DeGeneres"
+    },
+    {
+      "id": "6",
+      "name": "Jay-Z"
+    },
+    {
+      "id": "7",
+      "name": "Floyd Mayweather"
+    },
+    {
+      "id": "8",
+      "name": "Rihanna"
+    },
+    {
+      "id": "9",
+      "name": "Katy Perry"
+    },
+    {
+      "id": "10",
+      "name": "Robert Downey Jr"
+    },
+    {
+      "id": "11",
+      "name": "Steven Spielberg"
+    },
+    {
+      "id": "12",
+      "name": "Jennifer Lawrence"
+    },
+    {
+      "id": "13",
+      "name": "Bon Jovi"
+    },
+    {
+      "id": "14",
+      "name": "Bruno Mars"
+    },
+    {
+      "id": "15",
+      "name": "Kobe Bryant"
+    },
+    {
+      "id": "16",
+      "name": "Roger Federer"
+    },
+    {
+      "id": "17",
+      "name": "Miley Cyrus"
+    },
+    {
+      "id": "18",
+      "name": "Taylor Swift"
+    },
+    {
+      "id": "19",
+      "name": "Lady Gaga"
+    },
+    {
+      "id": "20",
+      "name": "Kanye West"
+    },
+    {
+      "id": "21",
+      "name": "Calvin Harris"
+    },
+    {
+      "id": "22",
+      "name": "Tiger Woods"
+    },
+    {
+      "id": "23",
+      "name": "Dwayne Johnson"
+    },
+    {
+      "id": "24",
+      "name": "Rafael Nadal"
+    },
+    {
+      "id": "25",
+      "name": "Bruce Springsteen"
+    },
+    {
+      "id": "26",
+      "name": "The Eagles"
+    },
+    {
+      "id": "27",
+      "name": "Justin Timberlake"
+    },
+    {
+      "id": "28",
+      "name": "One Direction"
+    },
+    {
+      "id": "29",
+      "name": "Paul McCartney"
+    },
+    {
+      "id": "30",
+      "name": "Cristiano Ronaldo"
+    },
+    {
+      "id": "31",
+      "name": "Sean 'Diddy' Combs"
+    },
+    {
+      "id": "32",
+      "name": "Ryan Seacrest"
+    },
+    {
+      "id": "33",
+      "name": "Justin Bieber"
+    },
+    {
+      "id": "34",
+      "name": "Kevin Durant"
+    },
+    {
+      "id": "35",
+      "name": "Jennifer Lopez"
+    },
+    {
+      "id": "36",
+      "name": "Sandra Bullock"
+    },
+    {
+      "id": "37",
+      "name": "James Patterson"
+    },
+    {
+      "id": "38",
+      "name": "Pharrell Williams"
+    },
+    {
+      "id": "39",
+      "name": "Glenn Beck"
+    },
+    {
+      "id": "40",
+      "name": "Peyton Manning"
+    },
+    {
+      "id": "41",
+      "name": "Mark Burnett"
+    },
+    {
+      "id": "42",
+      "name": "Simon Cowell"
+    },
+    {
+      "id": "43",
+      "name": "Novak Djokovic"
+    },
+    {
+      "id": "44",
+      "name": "Phil Mickelson"
+    },
+    {
+      "id": "45",
+      "name": "Jimmy Fallon"
+    },
+    {
+      "id": "46",
+      "name": "Lionel Messi"
+    },
+    {
+      "id": "47",
+      "name": "Avicii"
+    },
+    {
+      "id": "48",
+      "name": "Bradley Cooper"
+    },
+    {
+      "id": "49",
+      "name": "Peter Jackson"
+    },
+    {
+      "id": "50",
+      "name": "Michael Bay"
+    },
+    {
+      "id": "51",
+      "name": "Toby Keith"
+    },
+    {
+      "id": "52",
+      "name": "Leonardo DiCaprio"
+    },
+    {
+      "id": "53",
+      "name": "Matthew McConaughey"
+    },
+    {
+      "id": "54",
+      "name": "Sofia Vergara"
+    },
+    {
+      "id": "55",
+      "name": "Dwyane Wade"
+    },
+    {
+      "id": "56",
+      "name": "Gisele Bundchen"
+    },
+    {
+      "id": "57",
+      "name": "Tyler Perry"
+    },
+    {
+      "id": "58",
+      "name": "Gordon Ramsay"
+    },
+    {
+      "id": "59",
+      "name": "Rush Limbaugh"
+    },
+    {
+      "id": "60",
+      "name": "Jon Stewart"
+    },
+    {
+      "id": "61",
+      "name": "Mark Wahlberg"
+    },
+    {
+      "id": "62",
+      "name": "Howard Stern"
+    },
+    {
+      "id": "63",
+      "name": "Hugh Jackman"
+    },
+    {
+      "id": "64",
+      "name": "Ashton Kutcher"
+    },
+    {
+      "id": "65",
+      "name": "Maria Sharapova"
+    },
+    {
+      "id": "66",
+      "name": "Vin Diesel"
+    },
+    {
+      "id": "67",
+      "name": "Ben Affleck"
+    },
+    {
+      "id": "68",
+      "name": "Joss Whedon"
+    },
+    {
+      "id": "69",
+      "name": "Serena Williams"
+    },
+    {
+      "id": "70",
+      "name": "Kenny Chesney"
+    },
+    {
+      "id": "71",
+      "name": "J.J. Abrams"
+    },
+    {
+      "id": "72",
+      "name": "Neil Patrick Harris"
+    },
+    {
+      "id": "73",
+      "name": "Angelina Jolie"
+    },
+    {
+      "id": "74",
+      "name": "Kevin Spacey"
+    },
+    {
+      "id": "75",
+      "name": "Will Smith"
+    },
+    {
+      "id": "76",
+      "name": "Scarlett Johansson"
+    },
+    {
+      "id": "77",
+      "name": "Jennifer Aniston"
+    },
+    {
+      "id": "78",
+      "name": "Dan Brown"
+    },
+    {
+      "id": "79",
+      "name": "John Green"
+    },
+    {
+      "id": "80",
+      "name": "Kim Kardashian"
+    },
+    {
+      "id": "81",
+      "name": "Amy Adams"
+    },
+    {
+      "id": "82",
+      "name": "Stephen King"
+    },
+    {
+      "id": "83",
+      "name": "Dr. Phil McGraw"
+    },
+    {
+      "id": "84",
+      "name": "J.K. Rowling"
+    },
+    {
+      "id": "85",
+      "name": "Li Na"
+    },
+    {
+      "id": "86",
+      "name": "Sean Hannity"
+    },
+    {
+      "id": "87",
+      "name": "Seth MacFarlane"
+    },
+    {
+      "id": "88",
+      "name": "Bryan Cranston"
+    },
+    {
+      "id": "89",
+      "name": "Jon Hamm"
+    },
+    {
+      "id": "90",
+      "name": "Gwyneth Paltrow"
+    },
+    {
+      "id": "91",
+      "name": "Kate Moss"
+    },
+    {
+      "id": "92",
+      "name": "Meryl Streep"
+    },
+    {
+      "id": "93",
+      "name": "Kerry Washington"
+    },
+    {
+      "id": "94",
+      "name": "Kate Upton"
+    },
+    {
+      "id": "95",
+      "name": "Veronica Roth"
+    },
+    {
+      "id": "96",
+      "name": "Zooey Deschanel"
+    },
+    {
+      "id": "97",
+      "name": "Cameron Diaz"
+    },
+    {
+      "id": "98",
+      "name": "Lena Dunham"
+    },
+    {
+      "id": "99",
+      "name": "Kaley Cuoco"
+    },
+    {
+      "id": "100",
+      "name": "Natalie Portman"
+    }
+  ]
+}

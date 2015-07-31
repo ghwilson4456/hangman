@@ -8,14 +8,27 @@ module.exports = function(environment) {
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+        'ember-htmlbars': true,
+        'ember-htmlbars-attribute-syntax': true,
+        'ember-htmlbars-inline-if-helper': true,
+        'ember-htmlbars-component-generation': true,
+        'ember-metal-injected-properties': true,
+        'ember-routing-named-substates': true,
+        'ember-htmlbars-block-params': true,
+        'ember-routing-htmlbars-improved-actions': true,
+        'ember-views-component-block-info': true
       }
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'connect-src': "'self' localhost:1337"
     }
   };
 

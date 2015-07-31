@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Movies",
+      "description": "Guess the movie from a list of top grossing movies",
+      "collection": "movies"
+    },
+    {
+      "id": "2",
+      "name": "Celebrities",
+      "description": "Guess the celebrity from a list of top grossing celebrities.",
+      "collection": "celebrities"
+    }
+  ]
+}
