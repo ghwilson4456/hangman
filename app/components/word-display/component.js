@@ -4,13 +4,9 @@ export default Ember.Component.extend({
   classNames: ['word-display'],
 
   displayLetters: function() {
-    if (!this.attrs.word) {
-      return [];
-    }
-
-    var guessed = (this.attrs.guessed) ? this.attrs.guessed.toUpperCase().split('') : '';
+    var guessed = (this.attrs.guessed) ? this.attrs.guessed : '';
     var self = this;
-    return this.attrs.word.toUpperCase().split('').map(function(item) {
+    return this.attrs.word.map(function(item) {
       var charCode = item.charCodeAt(0);
       
       if (charCode < 65 || charCode > 90) {
