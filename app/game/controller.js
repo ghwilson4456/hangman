@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     var guessed = this.get('guessed').toUpperCase().split('');
     var valid = this.get('validLetters').toUpperCase().split('');
     return guessed.filter(function(val) {
-        return (valid.indexOf(val) == -1) ? false : val;
+        return (valid.indexOf(val) === -1) ? false : val;
       }).length === valid.length;
   }.property('guessed', 'validLetters'),
 
@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
     var guessed = this.get('guessed').toUpperCase().split('');
     var word = this.get('word').toUpperCase().split('');
     return guessed.filter(function(val) {
-      return word.indexOf(val) == -1;
+      return word.indexOf(val) === -1;
     }).length;
   }.property('word', 'guessed'),
 
