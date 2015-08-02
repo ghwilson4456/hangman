@@ -1,15 +1,10 @@
-<h2 id="title">...</h2>
-<!--
-{{#each model.categories as |category|}}
-<p>{{category.name}}</p>
-{{/each}}
-<hr>
-{{#each model.celebrities as |celebrity|}}
-<p>{{celebrity.name}}</p>
-{{/each}}
-<hr>
-{{#each model.movies as |movie|}}
-<p>{{movie.name}}</p>
-{{/each}}
--->
+<header class="header__app">
+  <h2 id="title">...</h2>
+  <nav>
+    {{#link-to 'application'}}home{{/link-to}}
+  </nav>
+</header>
+
+<section>
 {{outlet}}
+</section>
