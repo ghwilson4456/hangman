@@ -1,5 +1,5 @@
 {
-  "movies": [   
+  "movies": [
    {
       "id": "1",
       "name": "Avatar"
@@ -18,7 +18,7 @@
     },
     {
       "id": "5",
-      "name": "Star Wars: Episode I &mdash; The Phantom Menace"
+      "name": "Star Wars: Episode I — The Phantom Menace"
     },
     {
       "id": "6",
@@ -38,363 +38,363 @@
     },
     {
       "id": "10",
-      "name": " Pirates of the Caribbean: Dead Man&rsquo;s Chest"
+      "name": "Pirates of the Caribbean: Dead Man’s Chest"
     },
     {
       "id": "11",
-      "name": " The Lion King"
+      "name": "The Lion King"
     },
     {
       "id": "12",
-      "name": " Toy Story 3"
+      "name": "Toy Story 3"
     },
     {
       "id": "13",
-      "name": " Iron Man 3"
+      "name": "Iron Man 3"
     },
     {
       "id": "14",
-      "name": " The Hunger Games"
+      "name": "The Hunger Games"
     },
     {
       "id": "15",
-      "name": " Spider-Man"
+      "name": "Spider-Man"
     },
     {
       "id": "16",
-      "name": " Jurassic Park"
+      "name": "Jurassic Park"
     },
     {
       "id": "17",
-      "name": " Transformers: Revenge of the Fallen"
+      "name": "Transformers: Revenge of the Fallen"
     },
     {
       "id": "18",
-      "name": " Frozen"
+      "name": "Frozen"
     },
     {
       "id": "19",
-      "name": " Harry Potter and the Deathly Hallows: Part 2"
+      "name": "Harry Potter and the Deathly Hallows: Part 2"
     },
     {
       "id": "20",
-      "name": " Finding Nemo"
+      "name": "Finding Nemo"
     },
     {
       "id": "21",
-      "name": " Star Wars: Episode III &mdash; Revenge of the Sith"
+      "name": "Star Wars: Episode III — Revenge of the Sith"
     },
     {
       "id": "22",
-      "name": " The Lord of the Rings: The Return of the King"
+      "name": "The Lord of the Rings: The Return of the King"
     },
     {
       "id": "23",
-      "name": " Spider-Man 2"
+      "name": "Spider-Man 2"
     },
     {
       "id": "24",
-      "name": " The Passion of the Christ"
+      "name": "The Passion of the Christ"
     },
     {
       "id": "25",
-      "name": " Despicable Me 2"
+      "name": "Despicable Me 2"
     },
     {
       "id": "26",
-      "name": " Transformers: Dark of the Moon"
+      "name": "Transformers: Dark of the Moon"
     },
     {
       "id": "27",
-      "name": " The Lord of the Rings: The Two Towers"
+      "name": "The Lord of the Rings: The Two Towers"
     },
     {
       "id": "28",
-      "name": " Spider-Man 3"
+      "name": "Spider-Man 3"
     },
     {
       "id": "29",
-      "name": " Alice in Wonderland"
+      "name": "Alice in Wonderland"
     },
     {
       "id": "30",
-      "name": " Guardians of the Galaxy"
+      "name": "Guardians of the Galaxy"
     },
     {
       "id": "31",
-      "name": " Forrest Gump"
+      "name": "Forrest Gump"
     },
     {
       "id": "32",
-      "name": " Shrek the Third"
+      "name": "Shrek the Third"
     },
     {
       "id": "33",
-      "name": " Transformers"
+      "name": "Transformers"
     },
     {
       "id": "34",
-      "name": " Iron Man"
+      "name": "Iron Man"
     },
     {
       "id": "35",
-      "name": " Harry Potter and the Sorcerer&rsquo;s Stone"
+      "name": "Harry Potter and the Sorcerer’s Stone"
     },
     {
       "id": "36",
-      "name": " Indiana Jones and the Kingdom of the Crystal Skull"
+      "name": "Indiana Jones and the Kingdom of the Crystal Skull"
     },
     {
       "id": "37",
-      "name": " The Lord of the Rings: The Fellowship of the Ring"
+      "name": "The Lord of the Rings: The Fellowship of the Ring"
     },
     {
       "id": "38",
-      "name": " Iron Man 2"
+      "name": "Iron Man 2"
     },
     {
       "id": "39",
-      "name": " Star Wars: Episode II &mdash; Attack of the Clones"
+      "name": "Star Wars: Episode II — Attack of the Clones"
     },
     {
       "id": "40",
-      "name": " Pirates of the Caribbean: At World&rsquo;s End"
+      "name": "Pirates of the Caribbean: At World’s End"
     },
     {
       "id": "41",
-      "name": " Star Wars: Episode VI &mdash; Return of the Jedi"
+      "name": "Star Wars: Episode VI — Return of the Jedi"
     },
     {
       "id": "42",
-      "name": " Independence Day"
+      "name": "Independence Day"
     },
     {
       "id": "43",
-      "name": " Pirates of the Caribbean: The Curse of the Black Pearl"
+      "name": "Pirates of the Caribbean: The Curse of the Black Pearl"
     },
     {
       "id": "44",
-      "name": " Skyfall"
+      "name": "Skyfall"
     },
     {
       "id": "45",
-      "name": " The Hobbit: An Unexpected Journey"
+      "name": "The Hobbit: An Unexpected Journey"
     },
     {
       "id": "46",
-      "name": " Harry Potter and the Half-Blood Prince"
+      "name": "Harry Potter and the Half-Blood Prince"
     },
     {
       "id": "47",
-      "name": " The Twilight Saga: Eclipse"
+      "name": "The Twilight Saga: Eclipse"
     },
     {
       "id": "48",
-      "name": " The Twilight Saga: New Moon"
+      "name": "The Twilight Saga: New Moon"
     },
     {
       "id": "49",
-      "name": " Harry Potter and the Deathly Hallows: Part 1"
+      "name": "Harry Potter and the Deathly Hallows: Part 1"
     },
     {
       "id": "50",
-      "name": " The Sixth Sense"
+      "name": "The Sixth Sense"
     },
     {
       "id": "51",
-      "name": " Up"
+      "name": "Up"
     },
     {
       "id": "52",
-      "name": " Inception"
+      "name": "Inception"
     },
     {
       "id": "53",
-      "name": " The Twilight Saga: Breaking Dawn &mdash; Part 2"
+      "name": "The Twilight Saga: Breaking Dawn — Part 2"
     },
     {
       "id": "54",
-      "name": " Harry Potter and the Order of the Phoenix"
+      "name": "Harry Potter and the Order of the Phoenix"
     },
     {
       "id": "55",
-      "name": " The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"
+      "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"
     },
     {
       "id": "56",
-      "name": " Man of Steel"
+      "name": "Man of Steel"
     },
     {
       "id": "57",
-      "name": " Star Wars: Episode V &mdash; The Empire Strikes Back"
+      "name": "Star Wars: Episode V — The Empire Strikes Back"
     },
     {
       "id": "58",
-      "name": " Harry Potter and the Goblet of Fire"
+      "name": "Harry Potter and the Goblet of Fire"
     },
     {
       "id": "59",
-      "name": " Monsters, Inc."
+      "name": "Monsters, Inc."
     },
     {
       "id": "60",
-      "name": " Home Alone"
+      "name": "Home Alone"
     },
     {
       "id": "61",
-      "name": " The Matrix Reloaded"
+      "name": "The Matrix Reloaded"
     },
     {
       "id": "62",
-      "name": " The Twilight Saga: Breaking Dawn &mdash; Part 1"
+      "name": "The Twilight Saga: Breaking Dawn — Part 1"
     },
     {
       "id": "63",
-      "name": " Meet the Fockers"
+      "name": "Meet the Fockers"
     },
     {
       "id": "64",
-      "name": " The Hangover"
+      "name": "The Hangover"
     },
     {
       "id": "65",
-      "name": " Gravity"
+      "name": "Gravity"
     },
     {
       "id": "66",
-      "name": " Monsters University"
+      "name": "Monsters University"
     },
     {
       "id": "67",
-      "name": " Shrek"
+      "name": "Shrek"
     },
     {
       "id": "68",
-      "name": " The Amazing Spider-Man"
+      "name": "The Amazing Spider-Man"
     },
     {
       "id": "69",
-      "name": " Harry Potter and the Chamber of Secrets"
+      "name": "Harry Potter and the Chamber of Secrets"
     },
     {
       "id": "70",
-      "name": " The Incredibles"
+      "name": "The Incredibles"
     },
     {
       "id": "71",
-      "name": " How the Grinch Stole Christmas"
+      "name": "How the Grinch Stole Christmas"
     },
     {
       "id": "72",
-      "name": " Jaws"
+      "name": "Jaws"
     },
     {
       "id": "73",
-      "name": " Captain America: The Winter Soldier"
+      "name": "Captain America: The Winter Soldier"
     },
     {
       "id": "74",
-      "name": " The Hobbit: The Desolation of Smaug"
+      "name": "The Hobbit: The Desolation of Smaug"
     },
     {
       "id": "75",
-      "name": " The Lego Movie"
+      "name": "The Lego Movie"
     },
     {
       "id": "76",
-      "name": " Star Trek"
+      "name": "Star Trek"
     },
     {
       "id": "77",
-      "name": " I Am Legend"
+      "name": "I Am Legend"
     },
     {
       "id": "78",
-      "name": " The Blind Side"
+      "name": "The Blind Side"
     },
     {
       "id": "79",
-      "name": " The Hangover Part II"
+      "name": "The Hangover Part II"
     },
     {
       "id": "80",
-      "name": " Despicable Me"
+      "name": "Despicable Me"
     },
     {
       "id": "81",
-      "name": " Batman"
+      "name": "Batman"
     },
     {
       "id": "82",
-      "name": " Night at the Museum"
+      "name": "Night at the Museum"
     },
     {
       "id": "83",
-      "name": " Men in Black"
+      "name": "Men in Black"
     },
     {
       "id": "84",
-      "name": " Harry Potter and the Prisoner of Azkaban"
+      "name": "Harry Potter and the Prisoner of Azkaban"
     },
     {
       "id": "85",
-      "name": " Toy Story 2"
+      "name": "Toy Story 2"
     },
     {
       "id": "86",
-      "name": " Transformers: Age of Extinction"
+      "name": "Transformers: Age of Extinction"
     },
     {
       "id": "87",
-      "name": " Cars"
+      "name": "Cars"
     },
     {
       "id": "88",
-      "name": " Bruce Almighty"
+      "name": "Bruce Almighty"
     },
     {
       "id": "89",
-      "name": " Raiders of the Lost Ark"
+      "name": "Raiders of the Lost Ark"
     },
     {
       "id": "90",
-      "name": " Ghostbusters"
+      "name": "Ghostbusters"
     },
     {
       "id": "91",
-      "name": " Twister"
+      "name": "Twister"
     },
     {
       "id": "92",
-      "name": " My Big Fat Greek Wedding"
+      "name": "My Big Fat Greek Wedding"
     },
     {
       "id": "93",
-      "name": " Maleficent"
+      "name": "Maleficent"
     },
     {
       "id": "94",
-      "name": " Pirates of the Caribbean: On Stranger Tides"
+      "name": "Pirates of the Caribbean: On Stranger Tides"
     },
     {
       "id": "95",
-      "name": " Fast &amp; Furious 6"
+      "name": "Fast & Furious 6"
     },
     {
       "id": "96",
-      "name": " Shrek Forever After"
+      "name": "Shrek Forever After"
     },
     {
       "id": "97",
-      "name": " Brave"
+      "name": "Brave"
     },
     {
       "id": "98",
-      "name": " Oz the Great and Powerful"
+      "name": "Oz the Great and Powerful"
     },
     {
       "id": "99",
-      "name": " Beverly Hills Cop"
+      "name": "Beverly Hills Cop"
     },
     {
       "id": "100",
@@ -438,11 +438,11 @@
     },
     {
       "id": "110",
-      "name": "The Hunger Games: Mockingjay &mdash; Part 1"
+      "name": "The Hunger Games: Mockingjay — Part 1"
     },
     {
       "id": "111",
-      "name": "WALL&middot;E"
+      "name": "WALL·E"
     },
     {
       "id": "112",
@@ -490,7 +490,7 @@
     },
     {
       "id": "123",
-      "name": "Madagascar 3: Europe&rsquo;s Most Wanted"
+      "name": "Madagascar 3: Europe’s Most Wanted"
     },
     {
       "id": "124",
@@ -530,7 +530,7 @@
     },
     {
       "id": "133",
-      "name": "Mission: Impossible &mdash; Ghost Protocol"
+      "name": "Mission: Impossible — Ghost Protocol"
     },
     {
       "id": "134",
@@ -678,7 +678,7 @@
     },
     {
       "id": "170",
-      "name": "Mr. &amp; Mrs. Smith"
+      "name": "Mr. & Mrs. Smith"
     },
     {
       "id": "171",
@@ -698,7 +698,7 @@
     },
     {
       "id": "175",
-      "name": "Ocean&rsquo;s Eleven"
+      "name": "Ocean’s Eleven"
     },
     {
       "id": "176",
@@ -798,7 +798,7 @@
     },
     {
       "id": "200",
-      "name": "There&rsquo;s Something About Mary"
+      "name": "There’s Something About Mary"
     },
     {
       "id": "201",
@@ -938,7 +938,7 @@
     },
     {
       "id": "235",
-      "name": "A Bug&rsquo;s Life"
+      "name": "A Bug’s Life"
     },
     {
       "id": "236",
@@ -1010,7 +1010,7 @@
     },
     {
       "id": "253",
-      "name": "Fast &amp; Furious"
+      "name": "Fast & Furious"
     },
     {
       "id": "254",
@@ -1062,7 +1062,7 @@
     },
     {
       "id": "266",
-      "name": "We&rsquo;re the Millers"
+      "name": "We’re the Millers"
     },
     {
       "id": "267",
@@ -1086,7 +1086,7 @@
     },
     {
       "id": "272",
-      "name": "Les Mis&eacute;rables"
+      "name": "Les Misérables"
     },
     {
       "id": "273",
@@ -1142,7 +1142,7 @@
     },
     {
       "id": "286",
-      "name": "Lilo &amp; Stitch"
+      "name": "Lilo & Stitch"
     },
     {
       "id": "287",
@@ -1190,7 +1190,7 @@
     },
     {
       "id": "298",
-      "name": "Marley &amp; Me"
+      "name": "Marley & Me"
     },
     {
       "id": "299",
@@ -1230,7 +1230,7 @@
     },
     {
       "id": "308",
-      "name": "Cowboys &amp; Aliens"
+      "name": "Cowboys & Aliens"
     },
     {
       "id": "309",
@@ -1242,7 +1242,7 @@
     },
     {
       "id": "311",
-      "name": "Look Who&rsquo;s Talking"
+      "name": "Look Who’s Talking"
     },
     {
       "id": "312",
@@ -1274,7 +1274,7 @@
     },
     {
       "id": "319",
-      "name": "The King&rsquo;s Speech"
+      "name": "The King’s Speech"
     },
     {
       "id": "320",
@@ -1390,7 +1390,7 @@
     },
     {
       "id": "348",
-      "name": "Angels &amp; Demons"
+      "name": "Angels & Demons"
     },
     {
       "id": "349",
@@ -1522,7 +1522,7 @@
     },
     {
       "id": "381",
-      "name": "Dumb &amp; Dumber"
+      "name": "Dumb & Dumber"
     },
     {
       "id": "382",
@@ -1538,7 +1538,7 @@
     },
     {
       "id": "385",
-      "name": "My Best Friend&rsquo;s Wedding"
+      "name": "My Best Friend’s Wedding"
     },
     {
       "id": "386",
@@ -1582,7 +1582,7 @@
     },
     {
       "id": "396",
-      "name": "Ocean&rsquo;s Twelve"
+      "name": "Ocean’s Twelve"
     },
     {
       "id": "397",
@@ -1594,7 +1594,7 @@
     },
     {
       "id": "399",
-      "name": "Charlie&rsquo;s Angels"
+      "name": "Charlie’s Angels"
     },
     {
       "id": "400",
@@ -1622,7 +1622,7 @@
     },
     {
       "id": "406",
-      "name": "Something&rsquo;s Gotta Give"
+      "name": "Something’s Gotta Give"
     },
     {
       "id": "407",
@@ -1670,7 +1670,7 @@
     },
     {
       "id": "418",
-      "name": "Wayne&rsquo;s World"
+      "name": "Wayne’s World"
     },
     {
       "id": "419",
@@ -1718,7 +1718,7 @@
     },
     {
       "id": "430",
-      "name": "I Now Pronounce You Chuck &amp; Larry"
+      "name": "I Now Pronounce You Chuck & Larry"
     },
     {
       "id": "431",
@@ -1762,7 +1762,7 @@
     },
     {
       "id": "441",
-      "name": "Lemony Snicket&rsquo;s A Series of Unfortunate Events"
+      "name": "Lemony Snicket’s A Series of Unfortunate Events"
     },
     {
       "id": "442",
@@ -1790,7 +1790,7 @@
     },
     {
       "id": "448",
-      "name": "Big Momma&rsquo;s House"
+      "name": "Big Momma’s House"
     },
     {
       "id": "449",
@@ -1810,7 +1810,7 @@
     },
     {
       "id": "453",
-      "name": "Ocean&rsquo;s Thirteen"
+      "name": "Ocean’s Thirteen"
     },
     {
       "id": "454",
@@ -1830,7 +1830,7 @@
     },
     {
       "id": "458",
-      "name": "Lee Daniels&rsquo; The Butler"
+      "name": "Lee Daniels’ The Butler"
     },
     {
       "id": "459",
@@ -1850,7 +1850,7 @@
     },
     {
       "id": "463",
-      "name": "You&rsquo;ve Got Mail"
+      "name": "You’ve Got Mail"
     },
     {
       "id": "464",
@@ -1914,7 +1914,7 @@
     },
     {
       "id": "479",
-      "name": "It&rsquo;s Complicated"
+      "name": "It’s Complicated"
     },
     {
       "id": "480",
@@ -1934,7 +1934,7 @@
     },
     {
       "id": "484",
-      "name": "One Flew Over the Cuckoo&rsquo;s Nest"
+      "name": "One Flew Over the Cuckoo’s Nest"
     },
     {
       "id": "485",
@@ -1954,7 +1954,7 @@
     },
     {
       "id": "489",
-      "name": "Mr. Peabody &amp; Sherman"
+      "name": "Mr. Peabody & Sherman"
     },
     {
       "id": "490",
@@ -1962,7 +1962,7 @@
     },
     {
       "id": "491",
-      "name": "Valentine&rsquo;s Day"
+      "name": "Valentine’s Day"
     },
     {
       "id": "492",
@@ -2058,7 +2058,7 @@
     },
     {
       "id": "515",
-      "name": "Batman &amp; Robin"
+      "name": "Batman & Robin"
     },
     {
       "id": "516",
@@ -2118,7 +2118,7 @@
     },
     {
       "id": "530",
-      "name": "Porky&rsquo;s"
+      "name": "Porky’s"
     },
     {
       "id": "531",
@@ -2210,7 +2210,7 @@
     },
     {
       "id": "553",
-      "name": "The General&rsquo;s Daughter"
+      "name": "The General’s Daughter"
     },
     {
       "id": "554",
@@ -2318,7 +2318,7 @@
     },
     {
       "id": "580",
-      "name": "Charlie&rsquo;s Angels: Full Throttle"
+      "name": "Charlie’s Angels: Full Throttle"
     },
     {
       "id": "581",
@@ -2346,7 +2346,7 @@
     },
     {
       "id": "587",
-      "name": "Dr. Seuss&rsquo; The Cat in the Hat"
+      "name": "Dr. Seuss’ The Cat in the Hat"
     },
     {
       "id": "588",
@@ -2394,7 +2394,7 @@
     },
     {
       "id": "599",
-      "name": "You Don&rsquo;t Mess with the Zohan"
+      "name": "You Don’t Mess with the Zohan"
     },
     {
       "id": "600",
