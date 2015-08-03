@@ -5,42 +5,49 @@ export default Ember.Controller.extend({
   guessed: [],
   guessLimit: 6,
 
-  validLetters: function() {
+  validLetters: Ember.computed('word', function() {
     // Fix below to use a regular expressions for both duplicates and non-letters
     return this.get('word').join('').replace(/(.)(?=.*\1)/g, '').replace(/\W/g, '').split('');
-  }.property('word'),
+  }),
 
-  gameOver: function() {
-    var guessed = this.get('guessed');
-    var valid = this.get('validLetters');
-    var won = guessed.filter(function(val) {
+  gameOver: Ember.computed('word', 'guessed', function() {
+    let guessed = this.get('guessed');
+    let guessLimit = this.get('guessLimit');
+    let valid = this.get('validLetters');
+    let missedCount = this.get('missedCount');
+
+    let won = guessed.filter(function(val) {
       return (valid.indexOf(val) === -1) ? false : val;
     }).length === valid.length;
 
-    console.log('guessed =', guessed);
-    console.log('valid =', valid);
-    console.log('won =', won);
-    console.log('----------');
+    let gameOver = (won === true || missedCount >= guessLimit);
 
-    var gameOver = (won === true || this.get('missedCount') >= this.get('guessLimit'));
     if (gameOver && won) {
-      this.transitionToRoute('game.win');
+      return {
+        title: 'You won!',
+        message: `You completed the game with ${guessed.length} guesses and ${missedCount} misses.`
+      };
     } else if (gameOver) {
-      this.transitionToRoute('game.lose');
+      return {
+        title: 'You lost.',
+        message: `You lost the game in ${guessed.length} guesses.`
+      };
     }
-  }.property('word', 'guessed'),
 
-  missedCount: function() {
-    var guessed = this.get('guessed');
-    var word = this.get('word');
+    return false;
+  }),
+
+  missedCount: Ember.computed('word', 'guessed', function() {
+    let guessed = this.get('guessed');
+    let word = this.get('word');
     return guessed.filter(function(val) {
       return word.indexOf(val) === -1;
     }).length;
-  }.property('word', 'guessed'),
+  }),
 
   actions: {
-    letterSelected: function(letter) {
-      var guessed = this.get('guessed').join('');
+    letterSelected(letter) {
+      let guessed = this.get('guessed').join('');
       if (guessed.indexOf(letter) === -1) {
         guessed += letter;
         this.set('guessed', guessed.split(''));

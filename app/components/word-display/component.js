@@ -3,11 +3,11 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNames: ['word-display'],
 
-  displayLetters: function() {
-    var guessed = (this.attrs.guessed) ? this.attrs.guessed : '';
-    var self = this;
+  displayLetters: Ember.computed('attrs.word', 'attrs.guessed', function() {
+    let guessed = (this.attrs.guessed) ? this.attrs.guessed : '';
+    let self = this;
     return this.attrs.word.map(function(item) {
-      var charCode = item.charCodeAt(0);
+      let charCode = item.charCodeAt(0);
       
       if (charCode < 65 || charCode > 90) {
         if (charCode === 32) {
@@ -26,5 +26,5 @@ export default Ember.Component.extend({
 
       return { char: item };
     });
-  }.property('attrs.word', 'attrs.guessed')
+  })
 });
