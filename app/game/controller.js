@@ -15,7 +15,6 @@ export default Ember.Controller.extend({
     let guessLimit = this.get('guessLimit');
     let valid = this.get('validLetters');
     let missedCount = this.get('missedCount');
-    console.log(valid);
 
     let won = guessed.filter(function(val) {
       return (valid.indexOf(val) === -1) ? false : val;

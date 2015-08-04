@@ -1,5 +1,5 @@
 <div>
 {{#each alphabet as |letter|}}
-  <span {{bind-attr class=":keyboard-letter letter.selected:selected letter.disabled:missed"}} {{action "letterClick" letter.char}}>{{letter.char}}</span>
+  <span classes={{if letter.selected 'selected'}} {{bind-attr class=":keyboard-letter letter.selected:selected letter.disabled:missed"}} {{action "letterClick" letter.char}}>{{letter.char}}</span>
 {{/each}}
 </div>

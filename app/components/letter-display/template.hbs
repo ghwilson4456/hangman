@@ -1,5 +1,5 @@
 <div>
 {{#each displayLetters as |letter|}}
-  <span  class={{if letter.alpha 'letter non-letter' 'letter'}}>{{{letter.char}}}</span>
+  <span  class={{letter.classes}}>{{{letter.char}}}</span>
 {{/each}}
 </div>
