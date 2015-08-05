@@ -14,7 +14,7 @@ export default Ember.Component.extend({
     let x = (index * width);
     let y = 0;
 
-    if (index > length - 1) {
+    if (length > 0 && index > length - 1) {
       index = length - 1;
     }
 
