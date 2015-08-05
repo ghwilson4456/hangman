@@ -1,15 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['letter-input'],
   letter: undefined,
 
-  alphabet: Ember.computed('this.attrs.selected', function() {
+  alphabet: Ember.computed('attrs.selected', function() {
     let letters = [];
     for (let i = 'A'.charCodeAt(0), end = 'Z'.charCodeAt(0) + 1; i < end; ++i) {
       letters.push({
         char: String.fromCharCode(i),
-        selected: this.attrs.selected.indexOf(String.fromCharCode(i)) !== -1
+        selected: this.attrs.selected.value.indexOf(String.fromCharCode(i)) !== -1
       });
     }
     return letters;
@@ -17,7 +16,7 @@ export default Ember.Component.extend({
 
   actions: {
     letterClick(letter) {
-      if (!this.attrs.disableInput) {
+      if (!this.attrs.disableInput.value) {
         this.sendAction('action', letter);
       }
     }

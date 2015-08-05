@@ -28,7 +28,8 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
-      'connect-src': "'self' localhost:1337"
+      'connect-src': "'self' localhost:1337",
+      'style-src': "'self' 'unsafe-inline'"
     }
   };
 

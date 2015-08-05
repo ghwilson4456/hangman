@@ -1,5 +1,5 @@
 <ul>
-{{#each this.attrs.categories as |category|}}
+{{#each attrs.categories as |category|}}
   <li>{{#link-to 'game' category.collection}}{{category.name}}{{/link-to}}</li>
 {{/each}}
 </ul>

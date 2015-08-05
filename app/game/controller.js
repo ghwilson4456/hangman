@@ -6,8 +6,11 @@ export default Ember.Controller.extend({
   guessLimit: 6,
 
   validLetters: Ember.computed('word', function() {
-    // Fix below to use a regular expressions for both duplicates and non-letters
-    return this.get('word').join('').replace(/(.)(?=.*\1)/g, '').replace(/\W|[0-9]/g, '').split('');
+    return this.get('word')
+      .join('')
+      .replace(/(.)(?=.*\1)/g, '')
+      .replace(/\W|[0-9]/g, '')
+      .split('');
   }),
 
   gameOver: Ember.computed('word', 'guessed', function() {
@@ -39,12 +42,20 @@ export default Ember.Controller.extend({
     return false;
   }),
 
-  missedCount: Ember.computed('word', 'guessed', function() {
+  missedLetters: Ember.computed('word', 'guessed', function() {
     let guessed = this.get('guessed');
     let word = this.get('word');
     return guessed.filter(function(val) {
       return word.indexOf(val) === -1;
-    }).length;
+    });
+  }),
+
+  spriteIndex: Ember.computed('missedCount', function() {
+    return this.get('missedCount') - 1;
+  }),
+
+  missedCount: Ember.computed('missedLetters', function() {
+    return this.get('missedLetters').length;
   }),
 
   actions: {

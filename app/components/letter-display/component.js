@@ -1,11 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['letter-display'],
-
-  displayLetters: Ember.computed('attrs.word', 'attrs.letters', function() {
-    let letters = (this.attrs.letters) ? this.attrs.letters : [];
-    return this.attrs.word.map(item => {
+  displayLetters: Ember.computed('attrs.word', 'attrs.letters', 'attrs.blank', function() {
+    let letters = (this.attrs.letters.value) ? this.attrs.letters.value : [];
+    return this.attrs.word.value.map(item => {
       let code = item.toUpperCase().charCodeAt(0);
       let data = {
         char: item.toUpperCase(),
