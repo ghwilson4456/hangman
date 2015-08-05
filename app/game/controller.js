@@ -50,12 +50,12 @@ export default Ember.Controller.extend({
     });
   }),
 
-  spriteIndex: Ember.computed('missedCount', function() {
-    return this.get('missedCount') - 1;
-  }),
-
   missedCount: Ember.computed('missedLetters', function() {
     return this.get('missedLetters').length;
+  }),
+
+  spriteIndex: Ember.computed('missedCount', function() {
+    return this.get('missedCount') - 1;
   }),
 
   actions: {
