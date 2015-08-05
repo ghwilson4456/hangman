@@ -13,6 +13,11 @@ export default Ember.Component.extend({
     let s = this.attrs.sprite;
     let px = (i * w);
     let py = 0;
+
+    if (i > l - 1) {
+      i = l - 1;
+    }
+
     this.set('stepClasses', 'sprite-viewer--slide' + (i + 1));
     return (this.attrs.disableInlineStyles === true) ? null : new Ember.Handlebars.SafeString(`overflow:hidden;width:${w}px;height:${h}px;background:transparent url(${s}) no-repeat -${px}px -${py}px;`);
   })
