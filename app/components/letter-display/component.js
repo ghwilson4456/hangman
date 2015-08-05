@@ -8,22 +8,20 @@ export default Ember.Component.extend({
       let data = {
         char: item.toUpperCase(),
         alpha: (code >= 65 && code <= 90),
-        classes: (code >= 65 && code <= 90) ? ['alpha'] : ['non-alpha']
+        classes: (code >= 65 && code <= 90) ? 'letter-display__alpha' : 'letter-display__non-alpha'
       };
 
       if (code === 32) {
         data.char = '&nbsp;';
-        data.classes.push('space');
+        data.classes = 'letter-display__non-alpha--space';
       } else {
         data.char = item;
       }
 
       if (letters.indexOf(item) === -1 && data.alpha === true) {
         data.char = this.attrs.blank || '&nbsp;';
-        data.classes.push('blank-alpha');
+        data.classes = 'letter-display__alpha--blank';
       }
-
-      data.classes = data.classes.join(' ');
 
       return data;
     });

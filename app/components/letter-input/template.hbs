@@ -1,5 +1,5 @@
-<div>
+<section>
 {{#each alphabet as |letter|}}
-  <span classes={{if letter.selected 'selected'}} {{action "letterClick" letter.char}}>{{letter.char}}</span>
+  <span classes={{if letter.selected 'letter-input__letter letter-input__letter--selected' 'letter-input__letter'}} {{action "letterClick" letter.char}}>{{letter.char}}</span>
 {{/each}}
-</div>
+</section>
