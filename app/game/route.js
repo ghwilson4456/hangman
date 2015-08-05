@@ -5,6 +5,12 @@ export default Ember.Route.extend({
     return this.store.findAll(params.category_id);
   },
 
+  actions: {
+    goToHome() {
+      this.transitionTo('application');
+    }
+  },
+
   setupController(controller, model) {
     let len    = model.get('length');
     let record = model.objectAt(Math.floor(Math.random() * len));
