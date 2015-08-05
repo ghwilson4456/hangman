@@ -26,13 +26,11 @@ export default Ember.Controller.extend({
     let gameOver = (won === true || missedCount >= guessLimit);
 
     if (gameOver && won) {
-      console.log('won');
       return {
         title: 'You won!',
         message: `You completed the game with ${guessed.length} guesses and ${missedCount} misses.`
       };
     } else if (gameOver) {
-      console.log('lost');
       return {
         title: 'You lost.',
         message: `You lost the game in ${guessed.length} guesses.`
