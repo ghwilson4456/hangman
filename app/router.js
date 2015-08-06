@@ -6,10 +6,8 @@ let Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('game', { path: '/game/:category_id' }, function() {
-    this.route('win'); // Remove in favor of using class binding to display modal, or whatever
-    this.route('lose'); // ditto...
-  });
+  this.route('game', { path: '/game/:category_id' });
+  this.route('rules');
 });
 
 export default Router;
