@@ -15,7 +15,7 @@ export default Ember.Route.extend({
     let len    = model.get('length');
     let record = model.objectAt(Math.floor(Math.random() * len));
     let word   = record.get('name').toUpperCase().split('');
-    controller.set('word', word);
     controller.set('guessed', []);
+    controller.set('word', word);
   }
 });

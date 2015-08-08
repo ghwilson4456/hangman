@@ -13,33 +13,6 @@ export default Ember.Controller.extend({
       .split('');
   }),
 
-  gameOver: Ember.computed('word', 'guessed', function() {
-    let guessed = this.get('guessed');
-    let guessLimit = this.get('guessLimit');
-    let valid = this.get('validLetters');
-    let missedCount = this.get('missedCount');
-
-    let won = guessed.filter(function(val) {
-      return (valid.indexOf(val) === -1) ? false : val;
-    }).length === valid.length;
-
-    let gameOver = (won === true || missedCount >= guessLimit);
-
-    if (gameOver && won) {
-      return {
-        title: 'You won!',
-        message: `You completed the game with ${guessed.length} guesses and ${missedCount} misses.`
-      };
-    } else if (gameOver) {
-      return {
-        title: 'You lost.',
-        message: `You lost the game in ${guessed.length} guesses.`
-      };
-    }
-
-    return false;
-  }),
-
   missedLetters: Ember.computed('word', 'guessed', function() {
     let guessed = this.get('guessed');
     let word = this.get('word');
@@ -54,6 +27,37 @@ export default Ember.Controller.extend({
 
   spriteIndex: Ember.computed('missedCount', function() {
     return this.get('missedCount') - 1;
+  }),
+
+  didWin: Ember.computed('guessed', 'validLetters', function() {
+    let guessed = this.get('guessed');
+    let valid = this.get('validLetters');
+    return guessed.filter(function(val) {
+      return (valid.indexOf(val) === -1) ? false : val;
+    }).length === valid.length;
+  }),
+
+  didLose: Ember.computed('missedCount', function() {
+    return (this.get('missedCount') >= this.get('guessLimit'));
+  }),
+
+  gameOver: Ember.computed('didWin', 'didLose', function() {
+    let won = this.get('didWin');
+    let lost = this.get('didLose');
+
+    if (won) {
+      return {
+        title: 'You won!',
+        message: `You completed the game with ${this.get('guessed.length')} guesses and ${this.get('missedCount')} misses.`
+      };
+    } else if (lost) {
+      return {
+        title: 'You lost.',
+        message: `You lost the game in ${this.get('guessed.length')} guesses.`
+      };
+    }
+
+    return false;
   }),
 
   actions: {

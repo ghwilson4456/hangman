@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   layout: layout,
   actions: {
     closeModal: function() {
-      this.toggleProperty('enabled');
       this.sendAction();
     }
   }
