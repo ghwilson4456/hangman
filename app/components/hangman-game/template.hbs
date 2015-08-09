@@ -1,8 +1,18 @@
+{{#if collection}}
+{{collection.name}}
 {{sprite-viewer class="sprite-viewer" index=spriteIndex length=6 sprite="images/sprite_hangman.png" width="64" height="64" disableInlineStyles=true}}
 {{letter-display class="letter-display" word=word letters=guessed blank="_"}}
 {{letter-input class="letter-input" selected=guessed action="letterSelected" disableInput=gameOver}}
 {{letter-display class="missed-letters" word=missedLetters letters=missedLetters}}
 
-{{outlet}}
+{{yield}}
 
-{{modal-dialog enabled=gameOver title=gameOver.title message=gameOver.message action="goToHome"}}
+{{modal-dialog enabled=gameOver title=gameOver.title message=gameOver.message action="restart"}}
+<button {{action 'restart'}}>return</button>
+{{else}}
+<ul>
+  {{#each collections as |item|}}
+    <li {{action 'selectCollection' item}}>{{item.name}}</li>
+  {{/each}}
+</ul>
+{{/if}}

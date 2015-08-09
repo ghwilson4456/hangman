@@ -1,9 +1,0 @@
-<section class="category-selector">
-  <ul class="category-selector__list">
-  {{#each model as |category|}}
-    <li class="category-selector__list-item">
-      {{#link-to 'game' category.collection class="category-selector__list-item-link"}}{{category.name}}{{/link-to}}
-    </li>
-  {{/each}}
-  </ul>
-</section>

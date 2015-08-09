@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Component.extend({
+  collection: null,
   word: [],
   guessed: [],
   guessLimit: 6,
@@ -67,6 +68,19 @@ export default Ember.Controller.extend({
         guessed += letter;
         this.set('guessed', guessed.split(''));
       }
+    },
+
+    selectCollection: function(model) {
+      let len    = model.get('words.length');
+      let word = model.get('words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
+      console.log(word);
+      this.set('collection', model);
+      this.set('guessed', []);
+      this.set('word', word);
+    },
+
+    restart: function() {
+      this.set('collection', null);
     }
   }
 });
