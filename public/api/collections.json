@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Movies",
-      "description": "Guess the movie from a list of top grossing movies",
+      "description": "Guess from a list of top grossing movies.",
       "words": [
         "Avatar",
         "Titanic",
@@ -135,7 +135,6 @@
         "The Lorax",
         "Austin Powers in Goldmember",
         "Back to the Future",
-        "300",
         "Fast Five",
         "Mission: Impossible — Ghost Protocol",
         "Wedding Crashers",
@@ -611,7 +610,7 @@
     {
       "id": "2",
       "name": "Celebrities",
-      "description": "Guess the celebrity from a list of top grossing celebrities.",
+      "description": "Guess from a list of top grossing celebrities.",
       "words": [
         "Beyonce Knowles",
         "LeBron James",

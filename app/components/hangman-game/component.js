@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  tagName: 'section',
+  classNames: ['hangman-game'],
   collection: null,
   word: [],
   guessed: [],
@@ -45,7 +47,6 @@ export default Ember.Component.extend({
   gameOver: Ember.computed('didWin', 'didLose', function() {
     let won = this.get('didWin');
     let lost = this.get('didLose');
-
     if (won) {
       return {
         title: 'You won!',
@@ -57,7 +58,6 @@ export default Ember.Component.extend({
         message: `You lost the game in ${this.get('guessed.length')} guesses.`
       };
     }
-
     return false;
   }),
 
@@ -73,7 +73,7 @@ export default Ember.Component.extend({
     selectCollection: function(model) {
       let len    = model.get('words.length');
       let word = model.get('words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
-      console.log(word);
+      model.set('active', true);
       this.set('collection', model);
       this.set('guessed', []);
       this.set('word', word);

@@ -1,18 +1,30 @@
+<header class="hangman__header">
+  <h1 class="hangman__title" {{action 'restart'}}>{{title}}</h1>
+</header>
+
+<aside class="categories">
+  <header class="categories__header">
+    <h1 class="categories__title">Category:</h1>
+  </header>
+  <nav class="categories__nav">
+    {{#each collections as |item|}}
+    <a class="categories__nav__link" href="#" class={{if item.active 'active'}} {{action 'selectCollection' item}}>{{item.name}}</a>
+    {{/each}}
+  </nav>
+</aside>
+
 {{#if collection}}
-{{collection.name}}
-{{sprite-viewer class="sprite-viewer" index=spriteIndex length=6 sprite="images/sprite_hangman.png" width="64" height="64" disableInlineStyles=true}}
-{{letter-display class="letter-display" word=word letters=guessed blank="_"}}
-{{letter-input class="letter-input" selected=guessed action="letterSelected" disableInput=gameOver}}
-{{letter-display class="missed-letters" word=missedLetters letters=missedLetters}}
+<section class="game board">
+  <header class="game__header">
+    <p class="collection__description">{{collection.description}}</p>
+  </header>
+  {{sprite-viewer class="sprite-viewer" index=spriteIndex length=length sprite=sprite width=width height=height disableInlineStyles=disableInlineStyles}}
+  {{letter-display class="letter-display" word=word letters=guessed blank=blank}}
+  {{letter-input class="letter-input" selected=guessed action="letterSelected" disableInput=gameOver}}
+  {{letter-display class="missed-letters" word=missedLetters letters=missedLetters}}
 
-{{yield}}
-
-{{modal-dialog enabled=gameOver title=gameOver.title message=gameOver.message action="restart"}}
-<button {{action 'restart'}}>return</button>
+  {{modal-dialog enabled=gameOver title=gameOver.title message=gameOver.message action="restart"}}
+</section>
 {{else}}
-<ul>
-  {{#each collections as |item|}}
-    <li {{action 'selectCollection' item}}>{{item.name}}</li>
-  {{/each}}
-</ul>
+{{yield}}
 {{/if}}

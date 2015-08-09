@@ -1,1 +1,19 @@
-{{hangman-game collections=model}}
+{{#hangman-game
+    collections=model
+    title="Hangman"
+    length=6
+    sprite="images/sprite_hangman.png"
+    width="64"
+    height="64" 
+    disableInlineStyles=true
+    blank="_"
+  }}
+<article class="rules board">
+  <header class="rules__header">
+    <h1 class="rules__title">Rules</h1>
+  </header>
+  <p>Pick a category from the column to the left. A random word will be selected from the words in that collection.</p>
+  <p>The goal of the game is to guess the letters in the randomly selected word. No need to worry about numbers or punctuation; those will be presented for you and can even help give you an idea of what the word may be.</p>
+  <p>You will be presented with a gallows and a rope. For each wrong guess, a section of a stick figure will be drawn. There are six sections, therefore you get six guesses.</p>
+</article>
+{{/hangman-game}}
