@@ -1,5 +1,5 @@
 {{#if enabled}}
-<div class="modal-dialog__background"></div>
+<div class="modal-dialog__background" {{action 'closeModal'}}></div>
 <details open class="modal-dialog" {{action 'closeModal'}}>
   <summary class="modal-dialog__title">{{title}}</summary>
   {{#if message}}
