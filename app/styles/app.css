@@ -90,7 +90,7 @@
   border-bottom: 1px solid #ccc;
 }
 
-.categories {
+.hangman__categories {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -104,17 +104,17 @@
   background-color: #ddd;
 }
 
-.categories__title {
+.hangman__categories__title {
   font-size: 14px;
 }
 
-.categories__nav__link {
+.hangman__categories__nav__link {
   display: block;
   padding-left: 10px;
   line-height: 2em;
 }
 
-.board {
+.hangman__game-board {
   position: absolute;
   top: 63px;
   right: 0;
@@ -128,6 +128,6 @@
   border-bottom-right-radius: 20px;
 }
 
-.game {
+.hangman__game {
   font-family: 'Courier New', serif;
 }
