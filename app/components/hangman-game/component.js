@@ -17,11 +17,7 @@ export default Ember.Component.extend({
   }),
 
   missedLetters: Ember.computed('word', 'guessed', function() {
-    let guessed = this.get('guessed');
-    let word    = this.get('word');
-    return guessed.filter(function(val) {
-      return word.indexOf(val) === -1;
-    });
+    return this.get('guessed').filter(val => this.get('word').indexOf(val) === -1);
   }),
 
   missedCount: Ember.computed('missedLetters', function() {
@@ -33,11 +29,9 @@ export default Ember.Component.extend({
   }),
 
   didWin: Ember.computed('guessed', 'validLetters', function() {
-    let guessed = this.get('guessed');
-    let valid   = this.get('validLetters');
-    return guessed.filter(function(val) {
-      return (valid.indexOf(val) === -1) ? false : val;
-    }).length === valid.length;
+    return this.get('guessed').filter(val => {
+      return (this.get('validLetters').indexOf(val) === -1) ? false : val;
+    }).length === this.get('validLetters.length');
   }),
 
   didLose: Ember.computed('missedCount', function() {
@@ -45,14 +39,12 @@ export default Ember.Component.extend({
   }),
 
   gameOver: Ember.computed('didWin', 'didLose', function() {
-    let won  = this.get('didWin');
-    let lost = this.get('didLose');
-    if (won) {
+    if (this.get('didWin')) {
       return {
         title: 'You won!',
         message: `You completed the game with ${this.get('guessed.length')} guesses and ${this.get('missedCount')} misses.`
       };
-    } else if (lost) {
+    } else if (this.get('didLose')) {
       return {
         title: 'You lost.',
         message: `You lost the game in ${this.get('guessed.length')} guesses.`
