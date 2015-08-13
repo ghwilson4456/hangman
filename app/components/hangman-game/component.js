@@ -62,7 +62,7 @@ export default Ember.Component.extend({
       }
     },
 
-    selectCollection: function(model) {
+    selectCollection(model) {
       let len  = model.get('words.length');
       let word = model.get('words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
       model.set('active', true);
@@ -71,7 +71,7 @@ export default Ember.Component.extend({
       this.set('word', word);
     },
 
-    restart: function() {
+    restart() {
       this.set('collection', null);
     }
   }
