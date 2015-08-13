@@ -75,7 +75,7 @@
 .hangman-game {
   position: relative;
   margin: 20px;
-  width: 600px;
+  width: 700px;
   height: 400px;
   font-family: Avenir;
   color: #444;
@@ -118,7 +118,7 @@
   font-size: 14px;
 }
 
-.hangman__categories__nav__link {
+.hangman__categories__nav-link {
   display: block;
   padding-left: 10px;
   line-height: 2em;

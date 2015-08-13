@@ -5,12 +5,12 @@ export default Ember.Component.extend({
   attributeBindings: ['style'],
   stepClasses: '',
   classNameBindings: ['stepClasses'],
-  style: Ember.computed('attrs.index', 'attrs.length', 'attrs.width', 'attrs.height', 'attrs.sprite', 'attrs.disableInlineStyles', function() {
-    let index = Number(this.attrs.index.value);
-    let length = Number(this.attrs.length);
-    let width = Number(this.attrs.width);
-    let height = Number(this.attrs.height);
-    let sprite = this.attrs.sprite;
+  style: Ember.computed('index', 'length', 'width', 'height', 'sprite', 'disableInlineStyles', function() {
+    let index = Number(this.get('index'));
+    let length = Number(this.get('length'));
+    let width = Number(this.get('width'));
+    let height = Number(this.get('height'));
+    let sprite = this.get('sprite');
     let x = (index * width);
     let y = 0;
 
@@ -19,6 +19,6 @@ export default Ember.Component.extend({
     }
 
     this.set('stepClasses', 'sprite-viewer--slide-' + (index + 1));
-    return (this.attrs.disableInlineStyles === true) ? null : new Ember.Handlebars.SafeString(`overflow:hidden;width:${width}px;height:${height}px;background:transparent url(${sprite}) no-repeat -${x}px -${y}px;`);
+    return (this.get('disableInlineStyles') === true) ? null : new Ember.Handlebars.SafeString(`overflow:hidden;width:${width}px;height:${height}px;background:transparent url(${sprite}) no-repeat -${x}px -${y}px;`);
   })
 });

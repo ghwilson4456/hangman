@@ -18,7 +18,7 @@ export default Ember.Component.extend({
 
   missedLetters: Ember.computed('word', 'guessed', function() {
     let guessed = this.get('guessed');
-    let word = this.get('word');
+    let word    = this.get('word');
     return guessed.filter(function(val) {
       return word.indexOf(val) === -1;
     });
@@ -34,7 +34,7 @@ export default Ember.Component.extend({
 
   didWin: Ember.computed('guessed', 'validLetters', function() {
     let guessed = this.get('guessed');
-    let valid = this.get('validLetters');
+    let valid   = this.get('validLetters');
     return guessed.filter(function(val) {
       return (valid.indexOf(val) === -1) ? false : val;
     }).length === valid.length;
@@ -45,7 +45,7 @@ export default Ember.Component.extend({
   }),
 
   gameOver: Ember.computed('didWin', 'didLose', function() {
-    let won = this.get('didWin');
+    let won  = this.get('didWin');
     let lost = this.get('didLose');
     if (won) {
       return {
@@ -71,7 +71,7 @@ export default Ember.Component.extend({
     },
 
     selectCollection: function(model) {
-      let len    = model.get('words.length');
+      let len  = model.get('words.length');
       let word = model.get('words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
       model.set('active', true);
       this.set('collection', model);
