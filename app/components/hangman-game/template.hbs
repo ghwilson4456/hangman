@@ -33,6 +33,6 @@
 
   {{modal-dialog enabled=gameOver title=gameOver.title message=gameOver.message action="restart"}}
 </section>
-{{else}}
-{{yield}} <!-- rework so that yield doesn't rely on collection (hasBlock?) -->
+{{else if hasBlock}}
+{{yield}}
 {{/if}}
