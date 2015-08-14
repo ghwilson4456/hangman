@@ -1,76 +1,6 @@
-/**********
- ** RULES SCREEN
- **********/
-
-.rules__title {
-    font-size: 24px;
-    color: #000;
-}
-
-/**********
- ** SPRITE-VIEWER COMPONENT
- **********/
-
-.sprite-viewer {
-  overflow: hidden;
-  width: 64px;
-  height: 64px;
-  background: transparent url('../images/sprite_hangman.png') no-repeat 64px 0;
-}
-
-.sprite-viewer--slide-1 {
-  background-position: 0 0;
-}
-
-.sprite-viewer--slide-2 {
-  background-position: -64px 0;
-}
-
-.sprite-viewer--slide-3 {
-  background-position: -128px 0;
-}
-
-.sprite-viewer--slide-4 {
-  background-position: -192px 0;
-}
-
-.sprite-viewer--slide-5 {
-  background-position: -256px 0;
-}
-
-.sprite-viewer--slide-6 {
-  background-position: -320px 0;
-}
-
-/**********
- ** MODAL-DIALOG COMPONENT
- **********/
-
-.modal-dialog {
-  position: fixed;
-  left: 50%;
-  margin-left: -150px;
-  width: 300px;
-  height: 200px;
-  background-color: #fff;
-}
-
-.modal-dialog summary::-webkit-details-marker {
-  display: none;
-}
-
-.modal-dialog__background {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/**********
+/*****
  ** HANGMAN-GAME COMPONENT
- **********/
+ *****/
 
 .hangman-game {
   position: relative;
@@ -140,4 +70,74 @@
 
 .hangman__game {
   font-family: 'Courier New', serif;
+}
+
+/*****
+ ** RULES SCREEN
+ *****/
+
+.rules__title {
+    font-size: 24px;
+    color: #000;
+}
+
+/*****
+ ** SPRITE-VIEWER COMPONENT
+ *****/
+
+.sprite-viewer {
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  background: transparent url('../images/sprite_hangman.png') no-repeat 64px 0;
+}
+
+.sprite-viewer--slide-1 {
+  background-position: 0 0;
+}
+
+.sprite-viewer--slide-2 {
+  background-position: -64px 0;
+}
+
+.sprite-viewer--slide-3 {
+  background-position: -128px 0;
+}
+
+.sprite-viewer--slide-4 {
+  background-position: -192px 0;
+}
+
+.sprite-viewer--slide-5 {
+  background-position: -256px 0;
+}
+
+.sprite-viewer--slide-6 {
+  background-position: -320px 0;
+}
+
+/*****
+ ** MODAL-DIALOG COMPONENT
+ *****/
+
+.modal-dialog {
+  position: fixed;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+}
+
+.modal-dialog summary::-webkit-details-marker {
+  display: none;
+}
+
+.modal-dialog__background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
