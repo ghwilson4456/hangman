@@ -18,19 +18,10 @@
   <header class="hangman__game__header">
     <p class="collection__description">{{collection.description}}</p>
   </header>
-  {{sprite-viewer
-      class="sprite-viewer"
-      index=spriteIndex
-      length=length
-      sprite=spriteSrc
-      width=spriteWidth
-      height=spriteHeight
-      disableInlineStyles=disableInlineStyles
-    }}
+  {{sprite-viewer class="sprite-viewer" index=spriteIndex length=length sprite=spriteSrc width=spriteWidth height=spriteHeight disableInlineStyles=disableInlineStyles}}
   {{letter-display class="letter-display" word=word letters=guessed blank=blank}}
   {{letter-input class="letter-input" selected=guessed action="letterSelected" disableInput=gameOver}}
   {{letter-display class="missed-letters" word=missedLetters letters=missedLetters}}
-
   {{modal-dialog enabled=gameOver title=gameOver.title message=gameOver.message action="restart"}}
 </section>
 {{else if hasBlock}}
