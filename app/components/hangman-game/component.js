@@ -62,7 +62,7 @@ export default Ember.Component.extend({
   },
 
   actions: {
-    letterSelected(letter) {
+    handleLetterSelected(letter) {
       let guessed = this.get('guessed').join('');
       if (guessed.indexOf(letter) === -1) {
         guessed += letter;
@@ -70,7 +70,7 @@ export default Ember.Component.extend({
       }
     },
 
-    selectCollection(model) {
+    handleSelectCollection(model) {
       let len  = model.get('words.length');
       let word = model.get('words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
       this.resetActive();
@@ -81,7 +81,7 @@ export default Ember.Component.extend({
       this.set('word', word);
     },
 
-    restart() {
+    handleRestart() {
       this.set('collection', null);
       this.resetActive();
     }
