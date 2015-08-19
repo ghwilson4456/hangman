@@ -4,11 +4,11 @@
 
 <aside class="hangman__categories">
   <header class="hangman__categories__header">
-    <h1 class="hangman__categories__title">Category:</h1>
+    <h1 class="hangman__categories__title">Categories</h1>
   </header>
-  <nav class="hangman__categories__nav">
+  <nav class="hangman__category-nav">
     {{#each collections as |item|}}
-    <a class="hangman__categories__nav-link" href="#" class={{if item.active 'active'}} {{action 'selectCollection' item}}>{{item.name}}</a>
+    <a href="#" title={{item.description}} class={{if item.active 'hangman__category-nav-link--active' 'hangman__category-nav-link'}} {{action 'selectCollection' item}}>{{item.name}}</a>
     {{/each}}
   </nav>
 </aside>
@@ -22,8 +22,8 @@
   {{letter-display class="letter-display" word=word letters=guessed blank=blank}}
   {{letter-input class="letter-input" selected=guessed action="letterSelected" disableInput=gameOver}}
   {{letter-display class="missed-letters" word=missedLetters letters=missedLetters}}
-  {{modal-dialog enabled=gameOver title=gameOver.title message=gameOver.message action="restart"}}
 </section>
+{{modal-message enabled=gameOver title=gameOver.title message=gameOver.message action="restart"}}
 {{else if hasBlock}}
 {{yield}}
 {{/if}}

@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,700);
+
 /*****
  ** HANGMAN-GAME COMPONENT
  *****/
@@ -7,17 +9,18 @@
   margin: 20px;
   width: 700px;
   height: 400px;
-  font-family: Avenir;
-  color: #444;
-  border: 1px solid #999;
+  font-family: Roboto, Avenir, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   border-radius: 20px;
+  background-color: #eee;
 }
 
 .hangman__header {
   position: absolute;
   top: 0;
   right: 0;
-  left: 120px;
+  left: 155px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -27,7 +30,8 @@
   font-size: 32px;
   line-height: 52px;
   color: #000;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
 }
 
 .hangman__categories {
@@ -37,21 +41,50 @@
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-left: 10px;
-  width: 120px;
+  width: 140px;
+  color: #fff;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: #ddd;
+  background-color: #000;
 }
 
 .hangman__categories__title {
+  margin: 20px 0 5px 0;
+  padding: 0 15px 0 0;
   font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
 }
 
-.hangman__categories__nav-link {
+.hangman__category-nav-link {
   display: block;
-  padding-left: 10px;
+  padding-right: 15px;
   line-height: 2em;
+  font-size: 12px;
+  font-weight: 100;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+  color: #ccc;
+}
+
+.hangman__category-nav-link:hover {
+  color: #000;
+  background-color: #999;
+}
+
+.hangman__category-nav-link--active {
+  display: block;
+  padding-right: 15px;
+  line-height: 2em;
+  font-size: 12px;
+  font-weight: 100;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+  color: #000;
+  background-color: #eee;
 }
 
 .hangman__game-board {
@@ -59,17 +92,13 @@
   top: 63px;
   right: 0;
   bottom: 0;
-  left: 120px;
+  left: 155px;
   overflow-x: hidden;
   overflow-y: auto;
   padding-left: 20px;
   padding-right: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-
-.hangman__game {
-  font-family: 'Courier New', serif;
 }
 
 /*****
@@ -87,6 +116,7 @@
 
 .sprite-viewer {
   overflow: hidden;
+  margin-bottom: 20px;
   width: 64px;
   height: 64px;
   background: transparent url('../images/sprite_hangman.png') no-repeat 64px 0;
@@ -117,27 +147,101 @@
 }
 
 /*****
+ ** LETTER-DISPLAY COMPONENT
+ *****/
+
+ .letter-display {
+  margin-bottom: 20px;
+  font-weight: 700;
+ }
+
+ .letter-display__char {
+  display: inline-block;
+  width: 1.2em;
+  text-align: center;
+  border-bottom: 1px solid #000;
+ }
+
+ .letter-display__char--alpha {
+
+ }
+
+/*****
+ ** LETTER-INPUT COMPONENT
+ *****/
+
+.letter-input {
+  margin: 0 auto 20px auto;
+  width: 400px;
+}
+
+.letter-input:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.letter-input__letter {
+  display: block;
+  float: left;
+  padding: 3px;
+  margin: 2px;
+  width: 1.2em;
+  font-family: Roboto, Avenir, Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.letter-input__letter:hover {
+  background-color: rgba(255, 180, 0, 0.3);
+}
+
+.letter-input__letter--selected,
+.letter-input__letter--selected:hover {
+  background-color: rgb(255, 180, 0);
+}
+
+/*****
  ** MODAL-DIALOG COMPONENT
  *****/
 
-.modal-dialog {
-  position: fixed;
+.modal-message {
+  position: absolute;
+  z-index: 201;
+  top: 115px;
   left: 50%;
   margin-left: -150px;
-  width: 300px;
-  height: 200px;
+  padding: 20px;
+  width: 260px;
+  height: 130px;
   background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #000;
 }
 
-.modal-dialog summary::-webkit-details-marker {
+.modal-message__title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.modal-message summary::-webkit-details-marker {
   display: none;
 }
 
-.modal-dialog__background {
-  position: fixed;
+.modal-message__background {
+  position: absolute;
+  z-index: 200;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.modal-message__message {
+  line-height: 1.6em;
 }

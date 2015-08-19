@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   classNames: ['hangman-game'],
   collection: null,
   word: [],
+  category: null,
   guessed: [],
   guessLimit: 6,
 
@@ -47,11 +48,18 @@ export default Ember.Component.extend({
     } else if (this.get('didLose')) {
       return {
         title: 'You lost.',
-        message: `You lost the game in ${this.get('guessed.length')} guesses.`
+        message: `The ${this.get('category')} was ${this.get('word').join('')}. You lost the game after ${this.get('guessed.length')} guesses.`
       };
     }
     return false;
   }),
+
+  resetActive() {
+    this.get('collections').map((model) => {
+      model.set('active', false);
+      return model;
+    });
+  },
 
   actions: {
     letterSelected(letter) {
@@ -65,14 +73,17 @@ export default Ember.Component.extend({
     selectCollection(model) {
       let len  = model.get('words.length');
       let word = model.get('words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
+      this.resetActive();
       model.set('active', true);
       this.set('collection', model);
       this.set('guessed', []);
+      this.set('category', model.get('category'));
       this.set('word', word);
     },
 
     restart() {
       this.set('collection', null);
+      this.resetActive();
     }
   }
 });

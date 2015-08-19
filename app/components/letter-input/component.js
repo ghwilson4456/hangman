@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  tagName: 'section',
   letter: undefined,
 
   alphabet: Ember.computed('selected', function() {
