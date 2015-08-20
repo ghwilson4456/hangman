@@ -1,27 +1,30 @@
-<header class="hangman__header">
-  <h1 class="hangman__title" {{action 'handleRestart'}}>{{title}}</h1>
+<header class="c-hangman-game__head">
+  <h1 class="c-hangman-game__title" {{action 'handleRestart'}}>{{title}}</h1>
 </header>
 
-<aside class="hangman__categories">
-  <header class="hangman__categories__header">
-    <h1 class="hangman__categories__title">Categories</h1>
+<aside class="c-hangman-game__categories">
+  <header class="c-hangman-game__categories-head">
+    <h1 class="c-hangman-game__categories-title">Categories</h1>
   </header>
-  <nav class="hangman__category-nav">
+  <nav class="c-hangman-game__categories-nav">
     {{#each collections as |item|}}
-    <a href="#" title={{item.description}} class={{if item.active 'hangman__category-nav-link--active' 'hangman__category-nav-link'}} {{action 'handleSelectCollection' item}}>{{item.name}}</a>
+    <a href="#" title={{item.description}} class={{if item.active 'c-hangman-game__categories-link--active' 'c-hangman-game__categories-link'}} {{action 'handleSelectCollection' item}}>{{item.name}}</a>
     {{/each}}
   </nav>
 </aside>
 
 {{#if collection}}
-<section class="hangman__game hangman__game-board">
-  <header class="hangman__game__header">
-    <p class="collection__description">{{collection.description}}</p>
+<section class="c-hangman-game__board">
+  <header class="c-hangman-game__head">
+    <p class="c-hangman-game__description">{{collection.description}}</p>
   </header>
-  {{sprite-viewer class="sprite-viewer" index=spriteIndex length=length sprite=spriteSrc width=spriteWidth height=spriteHeight disableInlineStyles=disableInlineStyles}}
-  {{letter-display class="letter-display" word=word letters=guessed blank=blank}}
-  {{letter-input class="letter-input" selected=guessed action="handleLetterSelected" disableInput=gameOver}}
-  {{letter-display class="missed-letters" word=missedLetters letters=missedLetters}}
+  {{sprite-viewer class="c-sprite-viewer" index=spriteIndex length=length sprite=spriteSrc width=spriteWidth height=spriteHeight disableInlineStyles=disableInlineStyles}}
+  {{letter-display class="c-letter-display" word=word letters=guessed blank=blank}}
+  {{letter-input class="c-letter-input" selected=guessed action="handleLetterSelected" disableInput=gameOver}}
+  <div class="c-missed-letters__wrapper">
+    <label class="c-missed-letters__label">Missed:</label>
+    {{letter-display class="c-missed-letters" word=missedLetters letters=missedLetters}}
+  </div>
 </section>
 {{modal-message enabled=gameOver title=gameOver.title message=gameOver.message action="handleRestart"}}
 {{else if hasBlock}}

@@ -4,7 +4,7 @@ import layout from '../modal-message/template';
 export default Ember.Component.extend({
   layout: layout,
   actions: {
-    closeModal() {
+    handleCloseModal() {
       this.sendAction();
     }
   }

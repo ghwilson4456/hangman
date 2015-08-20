@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'section',
-  classNames: ['hangman-game'],
+  classNames: ['c-hangman-game'],
   collection: null,
   word: [],
   category: null,

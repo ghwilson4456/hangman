@@ -16,7 +16,7 @@ export default Ember.Component.extend({
   }),
 
   actions: {
-    letterClick(letter) {
+    handleLetterClick(letter) {
       if (!this.get('disableInput')) {
         this.sendAction('action', letter);
       }
