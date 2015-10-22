@@ -139,7 +139,10 @@
   background-position: -600px 0;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
   .c-sprite-viewer {
     background: transparent url('../images/sprite_hangman_2x.png') no-repeat 0 0;
     background-size: 700px 150px;
