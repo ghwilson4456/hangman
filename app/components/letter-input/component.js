@@ -1,15 +1,22 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const get = Ember.get;
+
+const {
+  Component,
+  computed
+} = Ember;
+
+export default Component.extend({
   tagName: 'section',
   letter: undefined,
 
-  alphabet: Ember.computed('selected', function() {
+  alphabet: computed('selected', function() {
     let letters = [];
     for (let i = 'A'.charCodeAt(0), end = 'Z'.charCodeAt(0) + 1; i < end; ++i) {
       letters.push({
         char: String.fromCharCode(i),
-        selected: this.get('selected').indexOf(String.fromCharCode(i)) !== -1
+        selected: get(this, 'selected').indexOf(String.fromCharCode(i)) !== -1
       });
     }
     return letters;
@@ -17,7 +24,7 @@ export default Ember.Component.extend({
 
   actions: {
     handleLetterClick(letter) {
-      if (!this.get('disableInput')) {
+      if (!get(this, 'disableInput')) {
         this.sendAction('action', letter);
       }
     }

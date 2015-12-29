@@ -1,19 +1,26 @@
 import Ember from 'ember';
 import layout from '../modal-message/template';
 
-export default Ember.Component.extend({
+const get = Ember.get;
+const set = Ember.set;
+
+const {
+  Component
+} = Ember;
+
+export default Component.extend({
   layout: layout,
   active: false,
 
   actions: {
     handleCloseModal() {
-      if (!this.get('active')) {
+      if (!get(this, 'active')) {
         setTimeout(() => {
-          this.set('active', true);
-        }, parseInt(this.get('actionDelay')));
+          set(this, 'active', true);
+        }, parseInt(get(this, 'actionDelay')));
       }
 
-      if (this.get('active')) {
+      if (get(this, 'active')) {
         this.sendAction();
       }
     }

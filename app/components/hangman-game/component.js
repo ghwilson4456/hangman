@@ -1,6 +1,14 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const get = Ember.get;
+const set = Ember.set;
+
+const {
+  Component,
+  computed
+} = Ember;
+
+export default Component.extend({
   tagName: 'section',
   classNames: ['c-hangman-game'],
   collection: null,
@@ -9,80 +17,80 @@ export default Ember.Component.extend({
   guessed: [],
   guessLimit: 6,
 
-  validLetters: Ember.computed('word', function() {
-    return this.get('word')
+  validLetters: computed('word', function() {
+    return get(this, 'word')
       .join('')
       .replace(/(.)(?=.*\1)/g, '')
       .replace(/\W|[0-9]/g, '')
       .split('');
   }),
 
-  missedLetters: Ember.computed('word', 'guessed', function() {
-    return this.get('guessed').filter(val => this.get('word').indexOf(val) === -1);
+  missedLetters: computed('word', 'guessed', function() {
+    return get(this, 'guessed').filter(val => get(this, 'word').indexOf(val) === -1);
   }),
 
-  missedCount: Ember.computed('missedLetters', function() {
-    return this.get('missedLetters').length;
+  missedCount: computed('missedLetters', function() {
+    return get(this, 'missedLetters').length;
   }),
 
-  spriteIndex: Ember.computed('missedCount', function() {
-    return this.get('missedCount') - 1;
+  spriteIndex: computed('missedCount', function() {
+    return get(this, 'missedCount') - 1;
   }),
 
-  didWin: Ember.computed('guessed', 'validLetters', function() {
-    return this.get('guessed').filter(val => {
-      return (this.get('validLetters').indexOf(val) === -1) ? false : val;
-    }).length === this.get('validLetters.length');
+  didWin: computed('guessed', 'validLetters', function() {
+    return get(this, 'guessed').filter(val => {
+      return (get(this, 'validLetters').indexOf(val) === -1) ? false : val;
+    }).length === get(this, 'validLetters.length');
   }),
 
-  didLose: Ember.computed('missedCount', function() {
-    return (this.get('missedCount') >= this.get('guessLimit'));
+  didLose: computed('missedCount', function() {
+    return (get(this, 'missedCount') >= get(this, 'guessLimit'));
   }),
 
-  gameOver: Ember.computed('didWin', 'didLose', function() {
-    if (this.get('didWin')) {
+  gameOver: computed('didWin', 'didLose', function() {
+    if (get(this, 'didWin')) {
       return {
         title: 'You won!',
-        message: `You completed the game with ${this.get('guessed.length')} guesses and ${this.get('missedCount')} misses.`
+        message: `You completed the game with ${get(this, 'guessed.length')} guesses and ${get(this, 'missedCount')} misses.`
       };
-    } else if (this.get('didLose')) {
+    } else if (get(this, 'didLose')) {
       return {
         title: 'You lost.',
-        message: `The ${this.get('category')} was ${this.get('word').join('')}. You lost the game after ${this.get('guessed.length')} guesses.`
+        message: `The ${get(this, 'category')} was ${get(this, 'word').join('')}. You lost the game after ${get(this, 'guessed.length')} guesses.`
       };
     }
     return false;
   }),
 
   resetActive() {
-    this.get('collections').map((model) => {
-      model.set('active', false);
+    get(this, 'collections').map((model) => {
+      set(model, 'active', false);
       return model;
     });
   },
 
   actions: {
     handleLetterSelected(letter) {
-      let guessed = this.get('guessed').join('');
+      let guessed = get(this, 'guessed').join('');
       if (guessed.indexOf(letter) === -1) {
         guessed += letter;
-        this.set('guessed', guessed.split(''));
+        set(this, 'guessed', guessed.split(''));
       }
     },
 
     handleSelectCollection(model) {
-      let len  = model.get('words.length');
-      let word = model.get('words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
+      let len  = get(model, 'words.length');
+      let word = get(model, 'words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
       this.resetActive();
-      model.set('active', true);
-      this.set('collection', model);
-      this.set('guessed', []);
-      this.set('category', model.get('category'));
-      this.set('word', word);
+      set(model, 'active', true);
+      set(this, 'collection', model);
+      set(this, 'guessed', []);
+      set(this, 'category', model.get('category'));
+      set(this, 'word', word);
     },
 
     handleRestart() {
-      this.set('collection', null);
+      set(this, 'collection', null);
       this.resetActive();
     }
   }

@@ -1,16 +1,25 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const get = Ember.get;
+const set = Ember.set;
+
+const {
+  Component,
+  computed,
+  Handlebars
+} = Ember;
+
+export default Component.extend({
   tagName: 'aside',
   attributeBindings: ['style'],
   stepClasses: '',
   classNameBindings: ['stepClasses'],
-  style: Ember.computed('index', 'length', 'width', 'height', 'sprite', 'disableInlineStyles', function() {
-    let index = Number(this.get('index'));
-    let length = Number(this.get('length'));
-    let width = Number(this.get('width'));
-    let height = Number(this.get('height'));
-    let sprite = this.get('sprite');
+  style: computed('index', 'length', 'width', 'height', 'sprite', 'disableInlineStyles', function() {
+    let index = Number(get(this, 'index'));
+    let length = Number(get(this, 'length'));
+    let width = Number(get(this, 'width'));
+    let height = Number(get(this, 'height'));
+    let sprite = get(this, 'sprite');
     let x = (index * width);
     let y = 0;
 
@@ -18,7 +27,7 @@ export default Ember.Component.extend({
       index = length - 1;
     }
 
-    this.set('stepClasses', 'c-sprite-viewer--slide-' + (index + 1));
-    return (this.get('disableInlineStyles') === true) ? null : new Ember.Handlebars.SafeString(Ember.Handlebars.escapeCSS(`overflow:hidden;width:${width}px;height:${height}px;background:transparent url(${sprite}) no-repeat -${x}px -${y}px;`));
+    set(this, 'stepClasses', 'c-sprite-viewer--slide-' + (index + 1));
+    return (get(this, 'disableInlineStyles') === true) ? null : new Handlebars.SafeString(Handlebars.escapeCSS(`overflow:hidden;width:${width}px;height:${height}px;background:transparent url(${sprite}) no-repeat -${x}px -${y}px;`));
   })
 });
