@@ -13,15 +13,18 @@ module.exports = function(environment) {
       }
     },
 
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "'self' http://fonts.gstatic.com/",
+      'connect-src': "'self' localhost:8080 localhost:3000 localhost:1337 localhost:3001",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com/css?family=Roboto:400,100,700"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
-
-    contentSecurityPolicy: {
-      'default-src': "'none'",
-      'style-src': "'self' 'unsafe-inline' localhost:4200 fonts.googleapis.com",
-      'font-src': "'self' fonts.googleapis.com http://fonts.gstatic.com",
     }
   };
 

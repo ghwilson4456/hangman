@@ -303,11 +303,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
   -webkit-animation: fadeIn ease-out 1;
   -moz-animation: fadeIn ease-out 1;
   animation: fadeIn ease-out 1;
- 
+
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
- 
+
   -webkit-animation-duration: 0.5s;
   -moz-animation-duration: 0.5s;
   animation-duration: 0.5s;
@@ -322,11 +322,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
   -webkit-animation: slideIn ease-out 1;
   -moz-animation: slideIn ease-out 1;
   animation: slideIn ease-out 1;
- 
+
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
- 
+
   -webkit-animation-duration: 0.3s;
   -moz-animation-duration: 0.3s;
   animation-duration: 0.3s;

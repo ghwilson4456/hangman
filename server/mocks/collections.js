@@ -1,3 +1,4 @@
+/*jshint node:true*/
 module.exports = function(app) {
   var express = require('express');
   var collectionsRouter = express.Router();
@@ -828,6 +829,15 @@ module.exports = function(app) {
     res.status(204).end();
   });
 
+  // The POST and PUT call will not contain a request body
+  // because the body-parser is not included by default.
+  // To use req.body, run:
+
+  //    npm install --save-dev body-parser
+
+  // After installing, you need to `use` the body-parser for
+  // this mock uncommenting the following line:
+  //
+  //app.use('/api/collections', require('body-parser').json());
   app.use('/api/collections', collectionsRouter);
 };
-

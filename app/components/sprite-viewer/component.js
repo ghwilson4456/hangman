@@ -19,6 +19,6 @@ export default Ember.Component.extend({
     }
 
     this.set('stepClasses', 'c-sprite-viewer--slide-' + (index + 1));
-    return (this.get('disableInlineStyles') === true) ? null : new Ember.Handlebars.SafeString(`overflow:hidden;width:${width}px;height:${height}px;background:transparent url(${sprite}) no-repeat -${x}px -${y}px;`);
+    return (this.get('disableInlineStyles') === true) ? null : new Ember.Handlebars.SafeString(Ember.Handlebars.escapeCSS(`overflow:hidden;width:${width}px;height:${height}px;background:transparent url(${sprite}) no-repeat -${x}px -${y}px;`));
   })
 });
