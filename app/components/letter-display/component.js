@@ -1,11 +1,19 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const get = Ember.get;
+
+const {
+  Component,
+  computed
+} = Ember;
+
+export default Component.extend({
   tagName: 'section',
-  
-  displayLetters: Ember.computed('word', 'letters', 'blank', function() {
-    let letters = (this.get('letters')) ? this.get('letters') : [];
-    return this.get('word').map(item => {
+
+  displayLetters: computed('word', 'letters', 'blank', function() {
+    let letters = (get(this, 'letters')) ? get(this, 'letters') : [];
+
+    return get(this, 'word').map(item => {
       let code = item.toUpperCase().charCodeAt(0);
       let data = {
         char: item.toUpperCase(),
@@ -21,7 +29,7 @@ export default Ember.Component.extend({
       }
 
       if (letters.indexOf(item) === -1 && data.alpha === true) {
-        data.char = this.get('blank') || '&nbsp;';
+        data.char = get(this, 'blank') || '&nbsp;';
         data.classes = 'c-letter-display__char c-letter-display__char--blank';
       }
 

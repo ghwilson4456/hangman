@@ -1,8 +1,13 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-  name:        DS.attr('string'),
-  description: DS.attr('string'),
-  category:    DS.attr('string'),
-  words:       DS.attr()
+const {
+  attr,
+  Model
+} = DS;
+
+export default Model.extend({
+  name:        attr('string'),
+  description: attr('string'),
+  category:    attr('string'),
+  words:       attr()
 });
