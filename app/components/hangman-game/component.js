@@ -1,11 +1,10 @@
 import Ember from 'ember';
 
-const get = Ember.get;
-const set = Ember.set;
-
 const {
   Component,
-  computed
+  computed,
+  get,
+  set
 } = Ember;
 
 export default Component.extend({
@@ -59,6 +58,7 @@ export default Component.extend({
         message: `The ${get(this, 'category')} was ${get(this, 'word').join('')}. You lost the game after ${get(this, 'guessed.length')} guesses.`
       };
     }
+    
     return false;
   }),
 
@@ -72,6 +72,7 @@ export default Component.extend({
   actions: {
     handleLetterSelected(letter) {
       let guessed = get(this, 'guessed').join('');
+
       if (guessed.indexOf(letter) === -1) {
         guessed += letter;
         set(this, 'guessed', guessed.split(''));
@@ -81,7 +82,9 @@ export default Component.extend({
     handleSelectCollection(model) {
       let len  = get(model, 'words.length');
       let word = get(model, 'words').objectAt(Math.floor(Math.random() * len)).toUpperCase().split('');
+
       this.resetActive();
+
       set(model, 'active', true);
       set(this, 'collection', model);
       set(this, 'guessed', []);

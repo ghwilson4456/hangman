@@ -50,8 +50,6 @@
   cursor: pointer;
 }
 
-/* Check and refactor BEM naming more accurately */
-
 .c-HangmanGame__categories {
   position: absolute;
   top: 0;
@@ -75,7 +73,8 @@
   text-align: right;
 }
 
-.c-HangmanGame__categories-link {
+.c-HangmanGame__categories-link,
+.c-HangmanGame__home-link {
   display: block;
   padding-right: 15px;
   line-height: 2em;
@@ -86,7 +85,8 @@
   color: #ccc;
 }
 
-.c-HangmanGame__categories-link:hover {
+.c-HangmanGame__categories-link:hover,
+.c-HangmanGame__home-link:hover {
   color: #000;
   background-color: #999;
 }
@@ -101,6 +101,13 @@
   text-align: right;
   color: #000;
   background-color: #eee;
+}
+
+.c-HangmanGame__home-link {
+    position: absolute;
+    bottom: 0;
+    width: 125px;
+    font-size: 0.75em;
 }
 
 /*****

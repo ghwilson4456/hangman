@@ -5,7 +5,9 @@ const get = Ember.get;
 const set = Ember.set;
 
 const {
-  Component
+  Component,
+  get,
+  set
 } = Ember;
 
 export default Component.extend({

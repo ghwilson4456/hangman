@@ -4,7 +4,8 @@ const get = Ember.get;
 
 const {
   Component,
-  computed
+  computed,
+  get
 } = Ember;
 
 export default Component.extend({

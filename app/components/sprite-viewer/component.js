@@ -1,12 +1,11 @@
 import Ember from 'ember';
 
-const get = Ember.get;
-const set = Ember.set;
-
 const {
   Component,
   computed,
-  Handlebars
+  get,
+  Handlebars,
+  set
 } = Ember;
 
 export default Component.extend({

@@ -11,10 +11,15 @@
       <a href="#" title={{item.description}} class={{if item.active 'c-HangmanGame__categories-link--active' 'c-HangmanGame__categories-link'}} {{action 'handleSelectCollection' item}}>{{item.name}}</a>
     {{/each}}
   </nav>
+  {{#if collection}}
+    <footer class="c-HangmanGame__foot">
+      <a href="#" title="Home" class="c-HangmanGame__home-link" {{action 'handleRestart'}}>&lt; Home</a>
+    </footer>
+  {{/if}}
 </aside>
 
-{{#if collection}}
-  <section class="c-HangmanGame__board">
+<section class="c-HangmanGame__board">
+  {{#if collection}}
     <header class="c-HangmanGame__head">
       <p class="c-HangmanGame__description">{{collection.description}}</p>
     </header>
@@ -48,15 +53,16 @@
         letters=missedLetters}}
         
     </div>
-  </section>
+  {{else if hasBlock}}
+    {{yield}}
+  {{/if}}
+</section>
 
+{{#if collection}}
   {{modal-message
     enabled=gameOver
     title=gameOver.title
     message=gameOver.message
     action="handleRestart"
     actionDelay=1000}}
-
-{{else if hasBlock}}
-  {{yield}}
 {{/if}}
