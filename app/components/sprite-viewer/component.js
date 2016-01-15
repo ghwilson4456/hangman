@@ -27,7 +27,7 @@ export default Component.extend({
       index = length - 1;
     }
 
-    set(this, 'stepClasses', 'c-sprite-viewer--slide-' + (index + 1));
+    set(this, 'stepClasses', 'c-SpriteViewer--slide-' + (index + 1));
     return (get(this, 'disableInlineStyles') === true) ? null : new Handlebars.SafeString(Handlebars.escapeCSS(`overflow:hidden;width:${width}px;height:${height}px;background:transparent url(${sprite}) no-repeat -${x}px -${y}px;`));
   })
 });

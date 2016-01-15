@@ -18,19 +18,19 @@ export default Component.extend({
       let data = {
         char: item.toUpperCase(),
         alpha: (code >= 65 && code <= 90),
-        classes: (code >= 65 && code <= 90) ? 'c-letter-display__char c-letter-display__char--alpha' : 'c-letter-display__char c-letter-display__char--non-alpha'
+        classes: (code >= 65 && code <= 90) ? 'c-LetterDisplay__char c-LetterDisplay__char--alpha' : 'c-LetterDisplay__char c-LetterDisplay__char--non-alpha'
       };
 
       if (code === 32) {
         data.char = '&nbsp;';
-        data.classes = 'c-letter-display__char c-letter-display__char--space';
+        data.classes = 'c-LetterDisplay__char c-LetterDisplay__char--space';
       } else {
         data.char = item;
       }
 
       if (letters.indexOf(item) === -1 && data.alpha === true) {
         data.char = get(this, 'blank') || '&nbsp;';
-        data.classes = 'c-letter-display__char c-letter-display__char--blank';
+        data.classes = 'c-LetterDisplay__char c-LetterDisplay__char--blank';
       }
 
       return data;

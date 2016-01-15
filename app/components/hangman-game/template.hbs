@@ -1,26 +1,26 @@
-<header class="c-hangman-game__head">
-  <h1 class="c-hangman-game__title" {{action 'handleRestart'}}>{{title}}</h1>
+<header class="c-HangmanGame__head">
+  <h1 class="c-HangmanGame__title" {{action 'handleRestart'}}>{{title}}</h1>
 </header>
 
-<aside class="c-hangman-game__categories">
-  <header class="c-hangman-game__categories-head">
-    <h1 class="c-hangman-game__categories-title">Categories</h1>
+<aside class="c-HangmanGame__categories">
+  <header class="c-HangmanGame__categories-head">
+    <h1 class="c-HangmanGame__categories-title">Categories</h1>
   </header>
-  <nav class="c-hangman-game__categories-nav">
+  <nav class="c-HangmanGame__categories-nav">
     {{#each collections as |item|}}
-      <a href="#" title={{item.description}} class={{if item.active 'c-hangman-game__categories-link--active' 'c-hangman-game__categories-link'}} {{action 'handleSelectCollection' item}}>{{item.name}}</a>
+      <a href="#" title={{item.description}} class={{if item.active 'c-HangmanGame__categories-link--active' 'c-HangmanGame__categories-link'}} {{action 'handleSelectCollection' item}}>{{item.name}}</a>
     {{/each}}
   </nav>
 </aside>
 
 {{#if collection}}
-  <section class="c-hangman-game__board">
-    <header class="c-hangman-game__head">
-      <p class="c-hangman-game__description">{{collection.description}}</p>
+  <section class="c-HangmanGame__board">
+    <header class="c-HangmanGame__head">
+      <p class="c-HangmanGame__description">{{collection.description}}</p>
     </header>
 
     {{sprite-viewer
-      class="c-sprite-viewer"
+      class="c-SpriteViewer"
       index=spriteIndex
       length=length
       sprite=spriteSrc
@@ -29,21 +29,21 @@
       disableInlineStyles=disableInlineStyles}}
 
     {{letter-display
-      class="c-letter-display"
+      class="c-LetterDisplay"
       word=word
       letters=guessed blank=blank}}
 
     {{letter-input
-      class="c-letter-input"
+      class="c-LetterInput"
       selected=guessed
       action="handleLetterSelected"
       disableInput=gameOver}}
 
-    <div class="c-missed-letters__wrapper">
-      <label class="c-missed-letters__label">Missed:</label>
+    <div class="c-MissedLetters__wrapper">
+      <label class="c-MissedLetters__label">Missed:</label>
 
       {{letter-display
-        class="c-missed-letters"
+        class="c-MissedLetters"
         word=missedLetters
         letters=missedLetters}}
         

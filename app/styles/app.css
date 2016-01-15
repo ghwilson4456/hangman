@@ -4,7 +4,7 @@
  ** HANGMAN-GAME COMPONENT
  *****/
 
-.c-hangman-game {
+.c-HangmanGame {
   overflow: hidden;
   position: relative;
   margin: 20px;
@@ -18,7 +18,7 @@
   background-color: #fff;
 }
 
-.c-hangman-game__board {
+.c-HangmanGame__board {
   position: absolute;
   top: 83px;
   right: 0;
@@ -32,7 +32,7 @@
   border-bottom-right-radius: 20px;
 }
 
-.c-hangman-game__head {
+.c-HangmanGame__head {
   position: absolute;
   top: 0;
   right: 0;
@@ -41,7 +41,7 @@
   padding-right: 20px;
 }
 
-.c-hangman-game__title {
+.c-HangmanGame__title {
   margin: 0;
   font-size: 32px;
   line-height: 52px;
@@ -52,7 +52,7 @@
 
 /* Check and refactor BEM naming more accurately */
 
-.c-hangman-game__categories {
+.c-HangmanGame__categories {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -66,7 +66,7 @@
   background-color: #000;
 }
 
-.c-hangman-game__categories-title {
+.c-HangmanGame__categories-title {
   margin: 20px 0 5px 0;
   padding: 0 15px 0 0;
   font-size: 18px;
@@ -75,7 +75,7 @@
   text-align: right;
 }
 
-.c-hangman-game__categories-link {
+.c-HangmanGame__categories-link {
   display: block;
   padding-right: 15px;
   line-height: 2em;
@@ -86,12 +86,12 @@
   color: #ccc;
 }
 
-.c-hangman-game__categories-link:hover {
+.c-HangmanGame__categories-link:hover {
   color: #000;
   background-color: #999;
 }
 
-.c-hangman-game__categories-link--active {
+.c-HangmanGame__categories-link--active {
   display: block;
   padding-right: 15px;
   line-height: 2em;
@@ -107,7 +107,7 @@
  ** SPRITE-VIEWER COMPONENT
  *****/
 
-.c-sprite-viewer {
+.c-SpriteViewer {
   overflow: hidden;
   margin-bottom: 20px;
   width: 100px;
@@ -115,27 +115,27 @@
   background: transparent url('../images/sprite_hangman.png') no-repeat 0 0;
 }
 
-.c-sprite-viewer--slide-1 {
+.c-SpriteViewer--slide-1 {
   background-position: -100px 0;
 }
 
-.c-sprite-viewer--slide-2 {
+.c-SpriteViewer--slide-2 {
   background-position: -200px 0;
 }
 
-.c-sprite-viewer--slide-3 {
+.c-SpriteViewer--slide-3 {
   background-position: -300px 0;
 }
 
-.c-sprite-viewer--slide-4 {
+.c-SpriteViewer--slide-4 {
   background-position: -400px 0;
 }
 
-.c-sprite-viewer--slide-5 {
+.c-SpriteViewer--slide-5 {
   background-position: -500px 0;
 }
 
-.c-sprite-viewer--slide-6 {
+.c-SpriteViewer--slide-6 {
   background-position: -600px 0;
 }
 
@@ -143,32 +143,32 @@
 only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
-  .c-sprite-viewer {
+  .c-SpriteViewer {
     background: transparent url('../images/sprite_hangman_2x.png') no-repeat 0 0;
     background-size: 700px 150px;
   }
 
-  .c-sprite-viewer--slide-1 {
+  .c-SpriteViewer--slide-1 {
     background-position: -100px 0;
   }
 
-  .c-sprite-viewer--slide-2 {
+  .c-SpriteViewer--slide-2 {
     background-position: -200px 0;
   }
 
-  .c-sprite-viewer--slide-3 {
+  .c-SpriteViewer--slide-3 {
     background-position: -300px 0;
   }
 
-  .c-sprite-viewer--slide-4 {
+  .c-SpriteViewer--slide-4 {
     background-position: -400px 0;
   }
 
-  .c-sprite-viewer--slide-5 {
+  .c-SpriteViewer--slide-5 {
     background-position: -500px 0;
   }
 
-  .c-sprite-viewer--slide-6 {
+  .c-SpriteViewer--slide-6 {
     background-position: -600px 0;
   }
 }
@@ -177,20 +177,20 @@ only screen and (min-device-pixel-ratio: 1.5) {
  ** LETTER-DISPLAY COMPONENT
  *****/
 
- .c-letter-display {
+ .c-LetterDisplay {
   margin-bottom: 20px;
   font-weight: 700;
  }
 
- .c-letter-display__char {
+ .c-LetterDisplay__char {
   display: inline-block;
   width: 1.2em;
   text-align: center;
   border-bottom: 1px solid #000;
  }
 
-.c-letter-display__char--space,
-.c-letter-display__char--non-alpha {
+.c-LetterDisplay__char--space,
+.c-LetterDisplay__char--non-alpha {
   border: none;
 }
 
@@ -198,20 +198,20 @@ only screen and (min-device-pixel-ratio: 1.5) {
  ** LETTER-INPUT COMPONENT
  *****/
 
-.c-letter-input {
+.c-LetterInput {
   position: absolute;
   bottom: 0;
   margin: 0 auto 20px auto;
   width: 505px;
 }
 
-.c-letter-input:after {
+.c-LetterInput:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.c-letter-input__letter {
+.c-LetterInput__letter {
   display: block;
   float: left;
   padding: 3px;
@@ -226,31 +226,31 @@ only screen and (min-device-pixel-ratio: 1.5) {
   cursor: pointer;
 }
 
-.c-letter-input__letter:hover {
+.c-LetterInput__letter:hover {
   background-color: rgba(255, 180, 0, 0.3);
 }
 
-.c-letter-input__letter--selected,
-.c-letter-input__letter--selected:hover {
+.c-LetterInput__letter--selected,
+.c-LetterInput__letter--selected:hover {
   background-color: rgb(255, 180, 0);
 }
 
-.c-missed-letters__wrapper {
+.c-MissedLetters__wrapper {
   position: absolute;
   top: 60px;
   left: 176px;
 }
 
-.c-missed-letters {
+.c-MissedLetters {
   overflow: hidden;
 }
 
-.c-missed-letters .c-letter-display__char {
+.c-MissedLetters .c-LetterDisplay__char {
   margin-right: 10px;
   border: none;
 }
 
-.c-missed-letters__label {
+.c-MissedLetters__label {
   float: left;
   padding-right: 15px;
   font-weight: bold;
@@ -284,7 +284,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
   from { top:-174px; } to { top:115px; }
 }
 
-.c-modal-message {
+.c-ModalMessage {
   position: absolute;
   z-index: 201;
   top: 115px;
@@ -298,7 +298,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
   border: 2px solid #000;
 }
 
-.c-modal-message--fade-in {
+.c-ModalMessage--fade-in {
   opacity: 0;
   -webkit-animation: fadeIn ease-out 1;
   -moz-animation: fadeIn ease-out 1;
@@ -317,7 +317,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
   animation-delay: 0.5s;
 }
 
-.c-modal-message--slide-in {
+.c-ModalMessage--slide-in {
   top: -174px;
   -webkit-animation: slideIn ease-out 1;
   -moz-animation: slideIn ease-out 1;
@@ -336,16 +336,16 @@ only screen and (min-device-pixel-ratio: 1.5) {
   animation-delay: 1s;
 }
 
-.c-modal-message__title {
+.c-ModalMessage__title {
   font-size: 1.5em;
   font-weight: bold;
 }
 
-.c-modal-message summary::-webkit-details-marker {
+.c-ModalMessage summary::-webkit-details-marker {
   display: none;
 }
 
-.c-modal-message__background {
+.c-ModalMessage__background {
   position: absolute;
   z-index: 200;
   top: 0;
@@ -356,7 +356,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
   border-radius: 20px;
 }
 
-.c-modal-message__message {
+.c-ModalMessage__message {
   line-height: 1.6em;
 }
 

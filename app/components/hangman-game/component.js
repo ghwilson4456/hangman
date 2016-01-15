@@ -10,7 +10,7 @@ const {
 
 export default Component.extend({
   tagName: 'section',
-  classNames: ['c-hangman-game'],
+  classNames: ['c-HangmanGame'],
   collection: null,
   word: [],
   category: null,

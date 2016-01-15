@@ -1,12 +1,12 @@
 {{#if enabled}}
-  <div class="c-modal-message__background c-modal-message--fade-in" {{action 'handleCloseModal'}}></div>
-  <details open class="c-modal-message c-modal-message--slide-in" {{action 'handleCloseModal'}}>
-    <summary class="c-modal-message__title">{{title}}</summary>
+  <div class="c-ModalMessage__background c-ModalMessage--fade-in" {{action 'handleCloseModal'}}></div>
+  <details open class="c-ModalMessage c-ModalMessage--slide-in" {{action 'handleCloseModal'}}>
+    <summary class="c-ModalMessage__title">{{title}}</summary>
     {{#if message}}
-      <p class="c-modal-message__message">{{message}}</p>
+      <p class="c-ModalMessage__message">{{message}}</p>
     {{/if}}
     {{#if yield}}
-      <p class="c-modal-message__message">{{yield}}</p>
+      <p class="c-ModalMessage__message">{{yield}}</p>
     {{/if}}
   </details>
 {{/if}}
