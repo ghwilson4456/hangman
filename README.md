@@ -1,7 +1,6 @@
 # Hangman
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A hangman game developed to demonstrate the use of Ember's component architecture.
 
 ## Prerequisites
 
