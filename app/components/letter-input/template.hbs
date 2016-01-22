@@ -1,3 +1,3 @@
 {{#each alphabet as |letter|}}
-  <span class={{if letter.selected 'c-LetterInput__letter c-LetterInput__letter--selected' 'c-LetterInput__letter'}} {{action "handleLetterClick" letter.char}}>{{letter.char}}</span>
+  <span class={{letter.classes}} {{action "handleLetterClick" letter.char}}>{{letter.char}}</span>
 {{/each}}

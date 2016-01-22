@@ -1,8 +1,14 @@
+/**
+ * Simple modal that displays title and message.
+ * @param {string} class
+ * @param {boolean} enabled
+ * @param {string} title
+ * @param {string} message
+ * @param {string} action
+ */
+
 import Ember from 'ember';
 import layout from '../modal-message/template';
-
-const get = Ember.get;
-const set = Ember.set;
 
 const {
   Component,
@@ -12,17 +18,20 @@ const {
 
 export default Component.extend({
   layout: layout,
-  active: false,
+  enabledTime: null,
+
+  activeChanged: Ember.observer('enabled', function() {
+    var time = new Date().getTime();
+    set(this, 'enabledTime', time);
+  }),
 
   actions: {
     handleCloseModal() {
-      if (!get(this, 'active')) {
-        setTimeout(() => {
-          set(this, 'active', true);
-        }, parseInt(get(this, 'actionDelay')));
-      }
+      var enabledTime = get(this, 'enabledTime');
+      var currentTime = new Date().getTime();
+      var clickDelay = get(this, 'clickDelay') * 1000;
 
-      if (get(this, 'active')) {
+      if (currentTime - enabledTime > clickDelay) {
         this.sendAction();
       }
     }

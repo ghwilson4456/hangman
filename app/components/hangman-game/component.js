@@ -1,3 +1,17 @@
+/**
+ * An Ember hangman game comprised of four required components.
+ * @param {object} collections
+ * @param {string} title
+ * @param {number} guessLimit
+ * @param {string} spriteSrc
+ * @param {number} maxScale
+ * @param {number} spriteWidth
+ * @param {number} spriteHeight
+ * @param {number} spriteColumns
+ * @param {boolean} disableInlineStyles
+ * @param {string} category
+ */
+
 import Ember from 'ember';
 
 const {
@@ -14,7 +28,6 @@ export default Component.extend({
   word: [],
   category: null,
   guessed: [],
-  guessLimit: 6,
 
   validLetters: computed('word', function() {
     return get(this, 'word')
@@ -33,7 +46,7 @@ export default Component.extend({
   }),
 
   spriteIndex: computed('missedCount', function() {
-    return get(this, 'missedCount') - 1;
+    return get(this, 'missedCount');
   }),
 
   didWin: computed('guessed', 'validLetters', function() {
@@ -58,7 +71,7 @@ export default Component.extend({
         message: `The ${get(this, 'category')} was ${get(this, 'word').join('')}. You lost the game after ${get(this, 'guessed.length')} guesses.`
       };
     }
-    
+
     return false;
   }),
 
