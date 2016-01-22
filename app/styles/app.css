@@ -122,61 +122,53 @@
   background: transparent url('../images/sprite_hangman.png') no-repeat 0 0;
 }
 
-.c-SpriteViewer--slide-1 {
+.c-SpriteViewer.c-SpriteViewer--slide-1 {
+  background-position: 0 0;
+}
+
+.c-SpriteViewer.c-SpriteViewer--slide-2 {
   background-position: -100px 0;
 }
 
-.c-SpriteViewer--slide-2 {
+.c-SpriteViewer.c-SpriteViewer--slide-3 {
   background-position: -200px 0;
 }
 
-.c-SpriteViewer--slide-3 {
+.c-SpriteViewer.c-SpriteViewer--slide-4 {
   background-position: -300px 0;
 }
 
-.c-SpriteViewer--slide-4 {
+.c-SpriteViewer.c-SpriteViewer--slide-5 {
   background-position: -400px 0;
 }
 
-.c-SpriteViewer--slide-5 {
+.c-SpriteViewer.c-SpriteViewer--slide-6 {
   background-position: -500px 0;
 }
 
-.c-SpriteViewer--slide-6 {
+.c-SpriteViewer.c-SpriteViewer--slide-7 {
   background-position: -600px 0;
 }
 
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
-only screen and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 768px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px),
+only screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+only screen and (min-resolution: 2dppx) {
   .c-SpriteViewer {
-    background: transparent url('../images/sprite_hangman_2x.png') no-repeat 0 0;
-    background-size: 700px 150px;
+    background: transparent url('../images/sprite_hangman@2x.png') no-repeat 0 0;
+    background-size: 700px;
   }
+}
 
-  .c-SpriteViewer--slide-1 {
-    background-position: -100px 0;
-  }
-
-  .c-SpriteViewer--slide-2 {
-    background-position: -200px 0;
-  }
-
-  .c-SpriteViewer--slide-3 {
-    background-position: -300px 0;
-  }
-
-  .c-SpriteViewer--slide-4 {
-    background-position: -400px 0;
-  }
-
-  .c-SpriteViewer--slide-5 {
-    background-position: -500px 0;
-  }
-
-  .c-SpriteViewer--slide-6 {
-    background-position: -600px 0;
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 768px),
+only screen and (min--moz-device-pixel-ratio: 3) and (min-width: 768px),
+only screen and (-o-min-device-pixel-ratio: 3/1) and (min-width: 768px),
+only screen and (min-device-pixel-ratio: 3) and (min-width: 768px),
+only screen and (min-resolution: 3dppx) {
+  .c-SpriteViewer {
+    background: transparent url('../images/sprite_hangman@3x.png') no-repeat 0 0;
+    background-size: 700px;
   }
 }
 
@@ -291,7 +283,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
   from { top:-174px; } to { top:115px; }
 }
 
-.c-ModalMessage {
+.c-ModalMessage__block {
   position: absolute;
   z-index: 201;
   top: 115px;

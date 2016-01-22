@@ -27,16 +27,18 @@
     {{sprite-viewer
       class="c-SpriteViewer"
       index=spriteIndex
-      length=length
+      length=guessLimit
       sprite=spriteSrc
       width=spriteWidth
       height=spriteHeight
+      columns=spriteColumns
       disableInlineStyles=disableInlineStyles}}
 
     {{letter-display
       class="c-LetterDisplay"
       word=word
-      letters=guessed blank=blank}}
+      letters=guessed
+      blank=blank}}
 
     {{letter-input
       class="c-LetterInput"
@@ -46,12 +48,10 @@
 
     <div class="c-MissedLetters__wrapper">
       <label class="c-MissedLetters__label">Missed:</label>
-
       {{letter-display
         class="c-MissedLetters"
         word=missedLetters
         letters=missedLetters}}
-        
     </div>
   {{else if hasBlock}}
     {{yield}}
@@ -60,9 +60,10 @@
 
 {{#if collection}}
   {{modal-message
+    class="c-ModalMessage"
     enabled=gameOver
     title=gameOver.title
     message=gameOver.message
     action="handleRestart"
-    actionDelay=1000}}
+    clickDelay=modalClickDelay}}
 {{/if}}
