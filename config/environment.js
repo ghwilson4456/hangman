@@ -4,22 +4,17 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'hangman',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
-    },
-
-    contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
-      'font-src': "'self' http://fonts.gstatic.com/",
-      'connect-src': "'self' localhost:8080 localhost:3000 localhost:1337 localhost:3001",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com/css?family=Roboto:400,100,700"
     },
 
     APP: {
@@ -38,7 +33,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
